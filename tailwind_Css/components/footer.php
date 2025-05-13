@@ -1,4 +1,3 @@
-
 <footer
     class="bg-black py-10 max-w-full px-4 md:px-12 lg:px-24 xl:px-32 text-white"
 >
@@ -63,15 +62,15 @@
         <ul class="flex flex-col space-y-2 text-center lg:text-left">
             <li>
                 <a
-                    href="../PrivacyPolicy"
+                    href="../Privacy-Policy"
                     class="hover:underline"
                 >Privacy Policy</a
                 >
             </li>
-            <li><a href="../Cookie-Policy" class="hover:underline">Cookie Policy</a></li>
+            <li><a href="../Cookie_Policy" class="hover:underline">Cookie Policy</a></li>
             <li>
                 <a
-                    href="https://dancing-torte-86ea5c.netlify.app/"
+                    href="../Terms-and-Conditions"
                     class="hover:underline"
                 >Terms & Conditions</a
                 >
@@ -125,3 +124,4 @@
         </div>
     </div>
 </footer>
+

@@ -1,3 +1,5 @@
+
+<?php include '../tailwind_Css/components/nav.php';?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="wooble_logo.png" />
     <link rel="stylesheet" href="style.css" />
+
+<!-- Tailwind_Css Index.php -->
+     <link rel="stylesheet" href="../tailwind_Css/output.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <title>Privacy Policy | Wooble</title>
   </head>
   <body>
@@ -846,3 +853,4 @@
 </div>
   </body>
 </html>
+<?php include '../tailwind_Css/components/footer.php';?>

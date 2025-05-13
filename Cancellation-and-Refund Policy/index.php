@@ -1,3 +1,7 @@
+
+
+<?php include '../tailwind_Css/components/nav.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,6 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="wooble_logo.png" />
     <link rel="stylesheet" href="style.css" />
+    
+    <!-- Tailwind_Css Index.php -->
+     <link rel="stylesheet" href="../tailwind_Css/output.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
      <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -33,5 +43,8 @@
 <p class="para_graph">If You cancel before the end of Your Subscription Term You will have access to Your account for the remainder of the Subscription Term.  In the event that WOOBLE suspends or terminates Your account for Your breach of these terms, You acknowledge and agree that You will receive no refund or exchange for any unused time on a Subscription, any Subscription Fees for any portion of the services, any content associated with Your account, or for anything else.
 </p>
     </div>
+
   </body>
 </html>
+
+<?php include '../tailwind_Css/components/footer.php';?>

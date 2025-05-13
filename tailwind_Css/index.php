@@ -262,6 +262,7 @@
 
     <!-- footer Section -->
     <?php include 'components/footer.php';?>
+    
 
   </body>
 </html>
