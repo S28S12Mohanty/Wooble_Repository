@@ -1,14 +1,31 @@
-<nav class="bg-blue-900/80 backdrop-blur-md border border-white/10 p-4">
+<!-- bg-blue-900/80 -->
+<?php
+     $loginUrl = "../L_S_Page"; // Replace with your actual login URL
+?>
+
+
+<nav class="bg-blue-900/80 backdrop-blur-md border border-white/10 p-2">
   <div class="container mx-auto flex justify-between items-center">
     <a href="#" class="text-white text-lg font-bold">Image</a>
     <div class="hidden md:flex space-x-10">
-      <a href="#home" class="text-gray-300 hover:text-white">Homee</a>
-      <a href="#services" class="text-gray-300 hover:text-white">Services</a>
-      <a href="#resume" class="text-gray-300 hover:text-white">Resume</a>
-      <a href="#portfolio" class="text-gray-300 hover:text-white">Portfolio</a>
-      <a href="#" class="text-gray-300 hover:text-white">Blog</a>
-      <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+      <a href="#home" class="text-gray-300 hover:text-white p-2">Home</a>
+      <a href="#services" class="text-gray-300 hover:text-white p-2">Services</a>
+      <a href="#resume" class="text-gray-300 hover:text-white p-2">Resume</a>
+      <a href="#portfolio" class="text-gray-300 hover:text-white p-2">Portfolio</a>
+      <a href="#" class="text-gray-300 hover:text-white p-2">Blog</a>
+      <a href="#contact" class="text-gray-300 hover:text-white p-2">Contact</a>
+
+      <a href="<?php echo $loginUrl; ?>"
+        class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center"
+        role="button">
+        LogIn
+      </a>
+
+
     </div>
+
+
+
     <div class="md:hidden">
       <button id="menu-btn" class="focus:outline-none">
         <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -25,7 +42,13 @@
     <a href="#portfolio" class="block text-gray-300 hover:text-white p-2">Portfolio</a>
     <a href="#" class="block text-gray-300 hover:text-white p-2">Blog</a>
     <a href="#" class="block text-gray-300 hover:text-white p-2">Contact</a>
+    <a href="<?php echo $loginUrl; ?>"
+      class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center"
+      role="button">
+      LogIn
+    </a>
   </div>
+
 </nav>
 
 <script>
