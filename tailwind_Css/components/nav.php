@@ -2,7 +2,7 @@
   <div class="container mx-auto flex justify-between items-center">
     <a href="#" class="text-white text-lg font-bold">Image</a>
     <div class="hidden md:flex space-x-10">
-      <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+      <a href="#home" class="text-gray-300 hover:text-white">Homee</a>
       <a href="#services" class="text-gray-300 hover:text-white">Services</a>
       <a href="#resume" class="text-gray-300 hover:text-white">Resume</a>
       <a href="#portfolio" class="text-gray-300 hover:text-white">Portfolio</a>
