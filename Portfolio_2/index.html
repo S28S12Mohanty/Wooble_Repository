@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navigation_bar">
+        <a href="#">Logo</a>
+      </div>
+
+      
+      <ul class="navbar-nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+       <li> <button>login</button></li>
+      </ul>
+      <!-- <button class="btn">login</button> -->
+
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Section Home -->
+    <section class="home_section" id="home">
+      <div class="home_content">
+        <h3>Hey I am Gerold</h3>
+        <h1>Web Developer + UX Designer</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
+          dignissimos delectus, odio quidem similique mollitia error fugiat
+          magnam numquam assumenda qui, corporis alias fuga quis? Illo
+          perspiciatis expedita reiciendis impedit.
+        </p>
+        <button type="button" class="button">Show CV</button>
+
+       <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+      <div class="home_img">
+        <img src="person2.png" alt="Img not found" />
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- hamburger active -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navbarNav = document.querySelector(".navbar-nav");
+
+        if (hamburger && navbarNav) {
+          hamburger.addEventListener("click", function () {
+            navbarNav.classList.toggle("active");
+
+            hamburger.classList.toggle("active");
+          });
+        } else {
+          console.error("Hamburger or navbar-nav element not found!");
+        }
+      });
+    </script>
+  </body>
+</html>
