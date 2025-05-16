@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +33,9 @@ body {
   padding: 0;
   gap: 20px;
   transition: all 0.3s ease-in-out;
+}
+.navbar-nav li {
+  margin-top: 10px;
 }
 
 .navbar-nav li a {
@@ -324,59 +326,56 @@ button:hover {
   background-color: #1a0a30;
   color: #ffffff;
   font-family: sans-serif;
-
 }
 .experience,
 .education {
-  display: flex; 
-            flex-direction: column; 
-            gap: 20px; 
-            max-width: 500px; 
-            margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .experience-1,
-        .experience-2,
-        .experience-3,
-        .experience-4,
-        .education-1,
-        .education-2,
-        .education-3,
-        .education-4 {
-            background-color: #13022c;
-            padding: 20px;
-            border-radius: 8px; 
-            border: 1px solid #331155; 
-                  }
-  .experience h5,
-  .education h5 {
-            font-size: 0.9em;
-          
-            margin: 0 0 5px 0; 
-        }
+.experience-2,
+.experience-3,
+.experience-4,
+.education-1,
+.education-2,
+.education-3,
+.education-4 {
+  background-color: #13022c;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #331155;
+}
+.experience h5,
+.education h5 {
+  font-size: 0.9em;
 
-        .experience h2,
-        .education h2 {
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 0; 
-            
-        }
-  .skills-section {
+  margin: 0 0 5px 0;
+}
+
+.experience h2,
+.education h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+.skills-section {
   padding: 60px 20px;
-  background-color: #1a0a30;  
+  background-color: #1a0a30;
   font-family: sans-serif;
-  }
+}
 .skills-section h2 {
   margin-bottom: 30px;
 }
-.skills-section p{
+.skills-section p {
   margin-bottom: 20px;
   font-size: 1.2em;
   text-align: center;
   text-wrap: wrap;
- 
 }
-.skills{
+.skills {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
@@ -391,40 +390,6 @@ button:hover {
   text-align: center;
   width: 150px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 668px) {
   .navbar {
@@ -536,10 +501,20 @@ button:hover {
     font-size: 2em;
   }
 
-  .button {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
+
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .button {
+      width: 80%;
+      max-width: 200px;
+      padding: 12px 20px;
+      font-size: 1.1em;
+    }
+  
 
   .works {
     grid-template-columns: 1fr;
@@ -557,38 +532,40 @@ button:hover {
     transform: translateY(0);
   }
   .e-w-section {
-                flex-direction: column; 
-                gap: 40px; 
-                align-items: center; 
-            }
-   .experience ,
-   .education {
-                 gap: 15px; /* Adjust gap on smaller screens */
-             }
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  .experience,
+  .education {
+    gap: 15px; /* Adjust gap on smaller screens */
+  }
 
-            .experience-1,
-            .experience-2,
-            .experience-3,
-            .experience-4,
-            .education-1,
-            .education-2,
-              .education-3,
-              .education-4 {
-                padding: 15px;             }
+  .experience-1,
+  .experience-2,
+  .experience-3,
+  .experience-4,
+  .education-1,
+  .education-2,
+  .education-3,
+  .education-4 {
+    padding: 15px;
+  }
 
-            .experience h5,
-            .education h5 {
-                font-size: 0.8em; 
-            }
+  .experience h5,
+  .education h5 {
+    font-size: 0.8em;
+  }
 
-            .experience h2,
-            .education h2 {
-                font-size: 1.3em; 
-            }
-            .skills-section p{
-              font-size: 1em; 
-            }
+  .experience h2,
+  .education h2 {
+    font-size: 1.3em;
+  }
+  .skills-section p {
+    font-size: 1em;
+  }
 }
+
 
 @media (min-width: 669px) {
   .navbar-nav {
@@ -637,8 +614,9 @@ button:hover {
   .home_img img {
     max-width: 300px;
   }
-   
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 }
-
- 
-
