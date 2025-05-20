@@ -5,33 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
+    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="../tailwind_Css/output.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navigation_bar">
-        <a href="#">Logo</a>
-      </div>
-
-      <ul class="navbar-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <button class="btn">login</button>
-      </ul>
-      <!-- <button class="btn">login</button> -->
-
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+    
+    <!-- Navbar -->
+    <?php include 'components/nav-bar.php'; ?>
+     
 
     <!-- Section Home -->
     <section class="home_section" id="home">
@@ -216,7 +200,9 @@
               <p class="work-category">Branding</p>
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
 
@@ -285,55 +271,25 @@
       </div>
     </section>
 
+    <!-- footer Section -->
+     <?php include '../tailwind_Css/components/footer.php';?>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- hamburger active -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const navbarNav = document.querySelector(".navbar-nav");
-
-        if (hamburger && navbarNav) {
-          hamburger.addEventListener("click", function () {
-            navbarNav.classList.toggle("active");
-
-            hamburger.classList.toggle("active");
-          });
-        } else {
-          console.error("Hamburger or navbar-nav element not found!");
-        }
-      });
-    </script>
+<!-- javascript -->
+    
 
     <!-- buttons work -->
     <script>
-      const filterButtons = document.querySelectorAll(".button");
+      const Buttons = document.querySelectorAll(".button");
       const workItems = document.querySelectorAll(".work-item");
 
-      filterButtons.forEach((button) => {
+      Buttons.forEach((button) => {
         button.addEventListener("click", () => {
-          filterButtons.forEach((btn) => btn.classList.remove("active"));
+          Buttons.forEach((btn) => btn.classList.remove("active"));
 
           button.classList.add("active");
 
