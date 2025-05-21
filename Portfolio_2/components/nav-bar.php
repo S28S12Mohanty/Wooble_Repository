@@ -1,8 +1,7 @@
 
 
 <?php $logIn = "../L_S_Page"; ?>
-
-<link rel="stylesheet" href="css/style.css">
+<?php $profile = "../profile/profile.php"?>
 
 <nav class="navbar">
       <div class="navigation_bar">
@@ -15,7 +14,7 @@
         <li><a href="#works">Works</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><a href="<?php echo $profile;?>">Profile</a></li>
         <a href="<?php echo $logIn;?>"><button class="btn">Login</button></a>
 
       </ul>
