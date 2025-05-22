@@ -16,6 +16,23 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
     <title>profile</title>
+      <style>
+          .scrolling-tabs {
+              overflow-x: auto;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
+          }
+
+          .scrolling-tabs .nav-link {
+              display: inline-block;
+              white-space: nowrap;
+          }
+          .scrolling-tabs .nav-link:hover, .scrolling-tabs .nav-link.active {
+              display: inline-block!important;
+              white-space: nowrap !important;
+              background-color: red !important;
+          }
+      </style>
   </head>
 
   <body>
@@ -121,49 +138,27 @@
       <div class="card">
         <img src="images.jpeg" class="img-fluid w-100" alt="Img not found" />
         <div class="card-body text-center">
-          <ul
-            class="nav nav-pills flex-row flex-nowrap flex-sm-wrap justify-content-around flex-wrap"
-          >
-            <li class="nav-link text-dark " id="timeline">Timeline</li>
-
-            <li class="nav-link text-dark" id="friends">Friends</li>
-            
-                
-            <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
-              John Sina
-            </li>
-
-            <li class="nav-link text-dark" id="photos">Photos</li>
-
-            <li class="nav-link text-dark" id="videos">Videos</li>
-             <li class="nav-link text-dark " id="timeline">Timeline</li>
-
-            <li class="nav-link text-dark" id="friends">Friends</li>
-            
-                
-            <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
-              John Sina
-            </li>
-
-            <li class="nav-link text-dark" id="photos">Photos</li>
-
-            <li class="nav-link text-dark" id="videos">Videos</li>
-             <li class="nav-link text-dark" id="photos">Photos</li>
-
-            <li class="nav-link text-dark" id="videos">Videos</li>
-             <li class="nav-link text-dark " id="timeline">Timeline</li>
-
-            <li class="nav-link text-dark" id="friends">Friends</li>
-            
-                
-            <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
-              John Sina
-            </li>
-
-            <li class="nav-link text-dark" id="photos">Photos</li>
-
-            <li class="nav-link text-dark" id="videos">Videos</li>
-          </ul>
+            <div class="scrolling-tabs">
+                <ul class="nav flex-nowrap">
+                    <li class="nav-link text-dark" id="timeline">Timeline 12</li>
+                    <li class="nav-link text-dark" id="friends">Friends qw</li>
+                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
+                    <li class="nav-link text-dark" id="photos">Photos</li>
+                    <li class="nav-link text-dark" id="videos">Videos</li>
+                    <li class="nav-link text-dark">Timeline</li>
+                    <li class="nav-link text-dark">Friends</li>
+                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
+                    <li class="nav-link text-dark">Photos</li>
+                    <li class="nav-link text-dark">Videos</li>
+                    <li class="nav-link text-dark">Photos</li>
+                    <li class="nav-link text-dark">Videos</li>
+                    <li class="nav-link text-dark">Timeline</li>
+                    <li class="nav-link text-dark">Friends</li>
+                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
+                    <li class="nav-link text-dark">Photos</li>
+                    <li class="nav-link text-dark">Videos</li>
+                </ul>
+            </div>
         </div>
         <div class="image-class">
           <div class="image-create">
@@ -928,6 +923,16 @@
         hideAllContentSections();
         timelineContent.style.display = "block";
       });
+      document.querySelectorAll('.scrolling-tabs .nav-link').forEach(tab => {
+          tab.addEventListener('click', function () {
+              // Remove active from all tabs
+              document.querySelectorAll('.scrolling-tabs .nav-link').forEach(t => t.classList.remove('active'));
+              // Add active to clicked tab
+              this.classList.add('active');
+
+          });
+      });
     </script>
+
   </body>
 </html>
