@@ -122,12 +122,40 @@
         <img src="images.jpeg" class="img-fluid w-100" alt="Img not found" />
         <div class="card-body text-center">
           <ul
-            class="nav nav-pills flex-column flex-sm-row justify-content-around gap-2"
+            class="nav nav-pills flex-row flex-nowrap flex-sm-wrap justify-content-around flex-wrap"
           >
             <li class="nav-link text-dark " id="timeline">Timeline</li>
 
             <li class="nav-link text-dark" id="friends">Friends</li>
+            
+                
+            <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
+              John Sina
+            </li>
 
+            <li class="nav-link text-dark" id="photos">Photos</li>
+
+            <li class="nav-link text-dark" id="videos">Videos</li>
+             <li class="nav-link text-dark " id="timeline">Timeline</li>
+
+            <li class="nav-link text-dark" id="friends">Friends</li>
+            
+                
+            <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
+              John Sina
+            </li>
+
+            <li class="nav-link text-dark" id="photos">Photos</li>
+
+            <li class="nav-link text-dark" id="videos">Videos</li>
+             <li class="nav-link text-dark" id="photos">Photos</li>
+
+            <li class="nav-link text-dark" id="videos">Videos</li>
+             <li class="nav-link text-dark " id="timeline">Timeline</li>
+
+            <li class="nav-link text-dark" id="friends">Friends</li>
+            
+                
             <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">
               John Sina
             </li>
