@@ -16,30 +16,13 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
     <title>profile</title>
-      <style>
-          .scrolling-tabs {
-              overflow-x: auto;
-              white-space: nowrap;
-              -webkit-overflow-scrolling: touch; /* iOS smooth scroll */
-          }
-
-          .scrolling-tabs .nav-link {
-              display: inline-block;
-              white-space: nowrap;
-          }
-          .scrolling-tabs .nav-link:hover, .scrolling-tabs .nav-link.active {
-              display: inline-block!important;
-              white-space: nowrap !important;
-              background-color: red !important;
-          }
-      </style>
   </head>
 
   <body>
     <!-- header -->
     <header class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Profile Page</a>
+        <a class="navbar-brand" href="#">Profile Image</a>
 
         <button
           class="navbar-toggler fs-6"
@@ -124,9 +107,6 @@
                 </svg>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="navbar-brand nav-link" href="#">Profile Image</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -140,21 +120,20 @@
         <div class="card-body text-center">
             <div class="scrolling-tabs">
                 <ul class="nav flex-nowrap">
-                    <li class="nav-link text-dark" id="timeline">Timeline 12</li>
-                    <li class="nav-link text-dark" id="friends">Friends qw</li>
-                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
+                    <li class="nav-link text-dark" id="timeline">Timeline</li>
+                    <li class="nav-link text-dark" id="friends">Friends</li>
                     <li class="nav-link text-dark" id="photos">Photos</li>
                     <li class="nav-link text-dark" id="videos">Videos</li>
                     <li class="nav-link text-dark">Timeline</li>
                     <li class="nav-link text-dark">Friends</li>
-                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
                     <li class="nav-link text-dark">Photos</li>
                     <li class="nav-link text-dark">Videos</li>
                     <li class="nav-link text-dark">Photos</li>
                     <li class="nav-link text-dark">Videos</li>
                     <li class="nav-link text-dark">Timeline</li>
                     <li class="nav-link text-dark">Friends</li>
-                    <li class="nav-link fs-5 fw-bold text-dark hide-on-mobile">John Sina</li>
+                    <li class="nav-link text-dark">Photos</li>
+                    <li class="nav-link text-dark">Videos</li>
                     <li class="nav-link text-dark">Photos</li>
                     <li class="nav-link text-dark">Videos</li>
                 </ul>
@@ -175,7 +154,45 @@
     <!-- TimeLine -->
     <div id="content-section">
       <div id="timelineContent" class="content-section" style="display: none">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="timeline-section">
+            <div class="timeline-item">
+                <div class="timeline-date">8</div>
+                <div class="timeline-card">
+                    <h6>Laravel</h6>
+                    <p>CTTC</p>
+                    <span class="timeline-tag tag-certification">certification</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">7</div>
+                <div class="timeline-card">
+                    <h6>Laravel 2</h6>
+                    <p>CTTC</p>
+                    <span class="timeline-tag tag-certification">certification</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">6</div>
+                <div class="timeline-card">
+                    <h6>Gandhi Institute x</h6>
+                    <p>B-tech</p>
+                    <span class="timeline-tag tag-education">education</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">5</div>
+                <div class="timeline-card">
+                    <h6>te inst</h6>
+                    <p>te deg</p>
+                    <span class="timeline-tag tag-education">education</span>
+                </div>
+            </div>
+
+            </div>
+        
       </div>
     </div>
 

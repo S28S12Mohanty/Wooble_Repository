@@ -1,9 +1,6 @@
 body {
   background-color: rgb(238, 238, 238);
 }
-
-/* First Section  */
-
 .first-section {
   margin-top: 5rem;
   margin-bottom: 20px;
@@ -27,16 +24,21 @@ body {
   padding-top: 60px;
   padding-bottom: 15px;
 }
-
-.first-section .nav-pills {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 10px;
-  list-style: none;
+.scrolling-tabs {
   overflow-x: auto;
-  padding: 0;
-  margin: 0;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrolling-tabs .nav-link {
+  display: inline-block;
+  white-space: nowrap;
+}
+.scrolling-tabs .nav-link:hover,
+.scrolling-tabs .nav-link.active {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  background-color: rgb(197, 192, 192)!important;
 }
 
 .first-section .nav-link {
@@ -50,17 +52,8 @@ body {
 
 .first-section .nav-link:hover {
   cursor: pointer;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
-
-.first-section .nav-link.fs-5 {
-  font-size: 1.25rem;
-}
-
-.first-section .nav-link.fw-bold {
-  font-weight: 700;
-}
-
 .first-section .image-class {
   position: absolute;
   top: 200px;
@@ -77,12 +70,6 @@ body {
   border: 5px solid #fff;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
-.first-section .nav-link:focus,
-.first-section .nav-link:focus-visible,
-.first-section .nav-link:active {
-  font-weight: 700 !important;
-}
-
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 600;
@@ -148,6 +135,41 @@ body {
   height: 18px;
   width: 18px;
 }
+.timeline-card {
+    background-color: #f0f0f0;
+    height: 500px;
+    width: 800px;
+}
+ .timeline-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .timeline-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .tag-certification {
+            background-color: #28a745; /* Green */
+        }
+
+        .tag-education {
+            background-color: #dc3545; /* Red */
+        }
+
+        .present-label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            margin-left: 50px; /* Align with timeline content */
+            font-size: 1.1rem;
+        }
 .videos-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -188,10 +210,7 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  .hide-on-mobile {
-    display: none !important;
-  }
-  .card-group {
+   .card-group {
     margin-left: 0;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -238,14 +257,14 @@ body {
   }
 }
 @media (min-width: 200px) {
-    .first-section .nav-pills {
-       margin: -29px;
-       /* margin-top: 1px; */
-}
-.first-section .image-class {
-  position: absolute;
-  top: 180px;
-  left: 50%;
-  /* z-index: 10; */
-}
+  .first-section .nav-pills {
+    margin: -29px;
+    /* margin-top: 1px; */
+  }
+  .first-section .image-class {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    /* z-index: 10; */
+  }
 }
