@@ -124,11 +124,13 @@ body {
     width: 60%;
     margin: 0 auto;
 }
+
 .flex {
     display: flex;
     align-items: center;
     gap: 16px;
 }
+
 .timeline-item {
     display: flex;
     margin-bottom: 20px;
@@ -154,7 +156,6 @@ body {
 }
 
 .timeline-card img {
-    width: 15%;
     border-radius: 10px;
 }
 
@@ -234,6 +235,10 @@ body {
         padding: 15px;
     }
 
+    .timeline-card img {
+        display: none;
+    }
+
     .timeline-item {
         flex-direction: column;
         width: 80%;
@@ -247,8 +252,6 @@ body {
     }
 
     .timeline-card {
-        border-left: none;
-        border-top: 5px solid #0d6efd;
         width: 100%;
         padding: 10px;
         left: 4rem;
@@ -261,6 +264,42 @@ body {
 @media (min-width: 576px) {
     .first-section .nav-pills {
         flex-direction: row !important;
+    }
+}
+@media (min-width: 768px) {
+    .timeline-card.flex {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .timeline-card img {
+        width: 7rem;
+        height: 80px;
+    }
+
+    .timeline-card h6 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-card p {
+        font-size: 0.95rem;
+    }
+
+    .timeline-tag {
+        font-size: 13px;
+    }
+}
+@media (min-width: 1440px) {
+
+    .timeline-card h6 {
+        font-size: 1.25rem;
+    }
+
+    .timeline-card p {
+        font-size: 1rem;
     }
 }
 
@@ -300,9 +339,7 @@ body {
     }
 
     .timeline-card {
-        border-left: none;
         position: relative;
-        border-top: 5px solid #0d6efd;
         margin-left: -14px;
     }
 }
