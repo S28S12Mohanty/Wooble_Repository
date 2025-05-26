@@ -13,6 +13,7 @@
 
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
+
 </head>
 
 <body>
@@ -251,7 +252,8 @@
     </div>
   </section>
 
-  
+<!--footer-->
+<!--  --><?php //include '../tailwind_Css/components/footer.php'; ?>
 
 
 

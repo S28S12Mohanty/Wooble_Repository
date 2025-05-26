@@ -266,6 +266,7 @@ body {
         flex-direction: row !important;
     }
 }
+
 @media (min-width: 768px) {
     .timeline-card.flex {
         flex-direction: row;
@@ -292,6 +293,7 @@ body {
         font-size: 13px;
     }
 }
+
 @media (min-width: 1440px) {
 
     .timeline-card h6 {
@@ -347,13 +349,11 @@ body {
 @media (min-width: 200px) {
     .first-section .nav-pills {
         margin: -29px;
-        /* margin-top: 1px; */
     }
 
     .first-section .image-class {
         position: absolute;
         top: 180px;
         left: 50%;
-        /* z-index: 10; */
     }
 }
