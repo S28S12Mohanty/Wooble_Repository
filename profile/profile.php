@@ -159,11 +159,24 @@
             <div class="timeline-date">1</div>
             <div class="timeline-card flex">
                 <img src="face.jpg">
-                <div>
+                <div class="item">
                     <h6>Laravel</h6>
+
                     <p>CTTC</p>
-                    <span class="timeline-tag tag-certification">certification</span>
-                    <span class="timeline-tag tag-education">education</span>
+                    <button class="timeline-tag tag-certification">certification</button>
+                    <button class="timeline-tag tag-education">education</button>
+                    <div class="dropdown-container">
+                        <button class="dropdown-button" aria-label="More options">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-action="edit">Update Item</button>
+                            <button data-action="delete">Delete Item</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,11 +185,23 @@
             <div class="timeline-date">2</div>
             <div class="timeline-card flex">
                 <img src="face.jpg">
-                <div>
+                <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
                     <span class="timeline-tag tag-certification">certification</span>
                     <span class="timeline-tag tag-education">education</span>
+                    <div class="dropdown-container">
+                        <button class="dropdown-button" aria-label="More options">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-action="edit">Update Item</button>
+                            <button data-action="delete">Delete Item</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -186,11 +211,23 @@
             <div class="timeline-date">3</div>
             <div class="timeline-card flex">
                 <img src="face.jpg">
-                <div>
+                <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
                     <span class="timeline-tag tag-certification">certification</span>
                     <span class="timeline-tag tag-education">education</span>
+                    <div class="dropdown-container">
+                        <button class="dropdown-button" aria-label="More options">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-action="edit">Update Item</button>
+                            <button data-action="delete">Delete Item</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,11 +236,24 @@
             <div class="timeline-date">4</div>
             <div class="timeline-card flex">
                 <img src="face.jpg">
-                <div>
+                <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
                     <span class="timeline-tag tag-certification">certification</span>
                     <span class="timeline-tag tag-education">education</span>
+                    <div class="dropdown-container"
+                    >
+                        <button class="dropdown-button" aria-label="More options">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu">
+                            <button data-action="edit">Update Item</button>
+                            <button data-action="delete">Delete Item</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -527,6 +577,55 @@
             // Add active to clicked tab
             this.classList.add('active');
 
+        });
+    });
+</script>
+
+<!--Dropdowm with js-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButtons = document.querySelectorAll('.dropdown-button');
+        let openDropdown = null;
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const dropdownMenu = button.nextElementSibling;
+
+                if (openDropdown && openDropdown !== dropdownMenu) {
+                    openDropdown.classList.remove('show');
+                }
+                dropdownMenu.classList.toggle('show');
+                openDropdown = dropdownMenu.classList.contains('show') ? dropdownMenu : null;
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (openDropdown && !openDropdown.closest('.dropdown-container').contains(event.target)) {
+                openDropdown.classList.remove('show');
+                openDropdown = null;
+            }
+        });
+
+        const dropdownMenuItems = document.querySelectorAll('.dropdown-menu button');
+        dropdownMenuItems.forEach(item => {
+            item.addEventListener('click', (event) => {
+                const action = event.target.dataset.action;
+                const timelineItem = event.target.closest('.timeline-item');
+                if (action === 'delete') {
+                    if (confirm(`Are you sure you want to delete?`)) {
+                        timelineItem.remove();
+                    }
+                }else if (action === 'edit') {
+                    const Lsurl = `../L_S_Page/index.html`;
+                    window.location.href = Lsurl;
+                }
+
+                if (openDropdown) {
+                    openDropdown.classList.remove('show');
+                    openDropdown = null;
+                }
+            });
         });
     });
 </script>
