@@ -20,27 +20,37 @@
 <!-- header -->
 <header class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Profile Image</a>
+        <!-- clickble  icon-->
+        <div style=" padding: 10px; display: flex; justify-content: flex-end;">
+            <div class="profile d-flex align-items-center">
+                <img id="userProfileIcon" src="face.jpg" alt="User Profile" class="rounded-circle me-2"
+                     style="width: 40px; height: 40px; object-fit: cover; cursor: pointer;">
+                <h6>Gerold lorem</h6>
+            </div>
+        </div>
 
-        <button
-                class="navbar-toggler fs-6"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon" style="background-size: 68%"></span>
+
+        <div id="profileDialogOverlay" class="profile-dialog-overlay hidden">
+            <div class="profile-dialog-content">
+                <button class="close-btn" id="closeDialogBtn">&times;</button>
+                <div class="profile-dialog-header">
+                    <img src="face.jpg" alt="User Profile">
+                    <div>
+                        <h5>173 Gerold lorem</h5>
+                        <p>User Id: 60040786769</p>
+                        <p>Gerold@wooble.org</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--humburger-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
 
-
-        <div
-                class="collapse navbar-collapse"
-                id="navbarSupportedContent"
-                style="margin-top: 10px"
-        >
-            <form class="d-flex ms-auto order-lg-last" role="search">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <form class="d-flex my-2 my-lg-0 order-lg-last" role="search">
                 <input
                         class="form-control me-2"
                         type="search"
@@ -54,63 +64,71 @@
 
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                class="bi bi-person-circle"
-                                viewBox="0 0 16 16"
-                        >
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                            <path
-                                    fill-rule="evenodd"
-                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                            />
-                        </svg>
+                    <a class="nav-link" href="#" aria-label="Profile">
+                        <span class="d-inline-block p-2">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-person-circle"
+                                    viewBox="0 0 16 16"
+                                    style="margin-top: -4px"
+                            >
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path
+                                        fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
+                                />
+                            </svg>
+                        </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                class="bi bi-chat-dots"
-                                viewBox="0 0 16 16"
-                        >
-                            <path
-                                    d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
-                            />
-                            <path
-                                    d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 0-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"
-                            />
-                        </svg>
+                    <a class="nav-link" href="#" aria-label="Chat">
+                        <span class="d-inline-block p-2">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-chat-dots"
+                                    viewBox="0 0 16 16"
+                                    style="margin-top: -4px"
+                            >
+                                <path
+                                        d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+                                />
+                                <path
+                                        d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 0-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"
+                                />
+                            </svg>
+                        </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                fill="currentColor"
-                                class="bi bi-bell"
-                                viewBox="0 0 16 16"
-                        >
-                            <path
-                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
-                            />
-                        </svg>
+                    <a class="nav-link" href="#" aria-label="Notifications">
+                        <span class="d-inline-block p-2">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-bell"
+                                    viewBox="0 0 16 16"
+                                    style="margin-top: -4px"
+                            >
+                                <path
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
+                                />
+                            </svg>
+                        </span>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
 </header>
-
 <!-- First Section -->
 
 <section class="first-section container">
@@ -155,13 +173,13 @@
 <div id="timelineContent" class="content-section">
 
     <div class="timeline-section">
+
         <div class="timeline-item">
             <div class="timeline-date">1</div>
             <div class="timeline-card flex">
-                <img src="face.jpg">
+                <img src="face.jpg" alt="Image" width="50">
                 <div class="item">
                     <h6>Laravel</h6>
-
                     <p>CTTC</p>
                     <button class="timeline-tag tag-certification">certification</button>
                     <button class="timeline-tag tag-education">education</button>
@@ -173,8 +191,8 @@
                             </svg>
                         </button>
                         <div class="dropdown-menu">
-                            <button data-action="edit">Update Item</button>
-                            <button data-action="delete">Delete Item</button>
+                            <button onclick="update(this)">Update Item</button>
+                            <button onclick="deleteItem(this)">Delete Item</button>
                         </div>
                     </div>
                 </div>
@@ -182,50 +200,51 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-date">2</div>
+            <div class="timeline-date">1</div>
             <div class="timeline-card flex">
-                <img src="face.jpg">
+                <img src="face.jpg" alt="Image" width="50">
                 <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
-                    <span class="timeline-tag tag-certification">certification</span>
-                    <span class="timeline-tag tag-education">education</span>
+                    <button class="timeline-tag tag-certification">certification</button>
+                    <button class="timeline-tag tag-education">education</button>
                     <div class="dropdown-container">
                         <button class="dropdown-button" aria-label="More options">
+                            <!-- SVG icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                  viewBox="0 0 16 16">
                                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
                             </svg>
                         </button>
                         <div class="dropdown-menu">
-                            <button data-action="edit">Update Item</button>
-                            <button data-action="delete">Delete Item</button>
+                            <button onclick="update()">Update Item</button>
+                            <button onclick="deleteItem(this)">Delete Item</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div class="timeline-item">
-            <div class="timeline-date">3</div>
+            <div class="timeline-date">1</div>
             <div class="timeline-card flex">
-                <img src="face.jpg">
+                <img src="face.jpg" alt="Image" width="50">
                 <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
-                    <span class="timeline-tag tag-certification">certification</span>
-                    <span class="timeline-tag tag-education">education</span>
+                    <button class="timeline-tag tag-certification">certification</button>
+                    <button class="timeline-tag tag-education">education</button>
                     <div class="dropdown-container">
                         <button class="dropdown-button" aria-label="More options">
+                            <!-- SVG icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                  viewBox="0 0 16 16">
                                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
                             </svg>
                         </button>
                         <div class="dropdown-menu">
-                            <button data-action="edit">Update Item</button>
-                            <button data-action="delete">Delete Item</button>
+                            <button onclick="update()">Update Item</button>
+                            <button onclick="deleteItem(this)">Delete Item</button>
                         </div>
                     </div>
                 </div>
@@ -233,34 +252,63 @@
         </div>
 
         <div class="timeline-item">
-            <div class="timeline-date">4</div>
+            <div class="timeline-date">1</div>
             <div class="timeline-card flex">
-                <img src="face.jpg">
+                <img src="face.jpg" alt="Image" width="50">
                 <div class="item">
                     <h6>Laravel</h6>
                     <p>CTTC</p>
-                    <span class="timeline-tag tag-certification">certification</span>
-                    <span class="timeline-tag tag-education">education</span>
-                    <div class="dropdown-container"
-                    >
+                    <button class="timeline-tag tag-certification">certification</button>
+                    <button class="timeline-tag tag-education">education</button>
+                    <div class="dropdown-container">
                         <button class="dropdown-button" aria-label="More options">
+                            <!-- SVG icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                  viewBox="0 0 16 16">
                                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
                             </svg>
                         </button>
                         <div class="dropdown-menu">
-                            <button data-action="edit">Update Item</button>
-                            <button data-action="delete">Delete Item</button>
+                            <button onclick="update()">Update Item</button>
+                            <button onclick="deleteItem(this)">Delete Item</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Update Modal -->
+        <div id="updateModal" class="modal-overlay">
+            <div class="modal-content">
+                <h3>Update Timeline Item</h3>
+                <label>Title:</label>
+                <input type="text" id="updateTitle"> <br>
+
+                <label>Description:</label>
+                <input type="text" id="updateDescription"><br>
+
+                <label>Image URL:</label>
+                <input type="text" id="updateImage" oninput="previewImage()"><br>
+                <img id="imagePreview" src="" width="100">
+
+                <div class="btn">
+                    <button onclick="applyUpdate()">Save Changes</button>
+                    <button onclick="closeModal()">Cancel</button>
+                </div>
+
             </div>
         </div>
 
 
     </div>
 
+
+    <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"-->
+    <!--             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
+    <!--             class="feather feather-plus">-->
+    <!--            <line x1="12" y1="5" x2="12" y2="19"></line>-->
+    <!--            <line x1="5" y1="12" x2="19" y2="12"></line>-->
+    <!--        </svg>-->
 </div>
 
 
@@ -522,6 +570,8 @@
 
 
 <!-- javascript -->
+
+<!--Friend-->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const timeline = document.getElementById("timeline");
@@ -535,100 +585,142 @@
         const photosContent = document.getElementById("photosContent");
         const videosContent = document.getElementById("videosContent");
 
-        // Function to hide all content sections
         function hideAllContentSections() {
             contentSections.forEach((section) => {
                 section.style.display = "none";
             });
         }
 
-        // Event listener for Timeline
         timeline.addEventListener("click", function () {
             hideAllContentSections();
             timelineContent.style.display = "block";
         });
 
-        // Event listener for Friends
         friends.addEventListener("click", function () {
             hideAllContentSections();
             friendsContent.style.display = "block";
         });
 
-        // Event listener for Photos
         photos.addEventListener("click", function () {
             hideAllContentSections();
             photosContent.style.display = "block";
         });
 
-        // Event listener for Videos
         videos.addEventListener("click", function () {
             hideAllContentSections();
             videosContent.style.display = "block";
         });
 
-        // Initially show the Timeline content (or any default section you prefer)
         hideAllContentSections();
         timelineContent.style.display = "block";
     });
+
     document.querySelectorAll('.scrolling-tabs .nav-link').forEach(tab => {
         tab.addEventListener('click', function () {
-            // Remove active from all tabs
             document.querySelectorAll('.scrolling-tabs .nav-link').forEach(t => t.classList.remove('active'));
-            // Add active to clicked tab
             this.classList.add('active');
 
         });
     });
+
 </script>
 
-<!--Dropdowm with js-->
+<!--clickable close btn-->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const dropdownButtons = document.querySelectorAll('.dropdown-button');
-        let openDropdown = null;
+    document.addEventListener('DOMContentLoaded', function () {
+        const userProfileIcon = document.getElementById('userProfileIcon');
+        const profileDialogOverlay = document.getElementById('profileDialogOverlay');
+        const closeDialogBtn = document.getElementById('closeDialogBtn');
 
-        dropdownButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.stopPropagation();
-                const dropdownMenu = button.nextElementSibling;
-
-                if (openDropdown && openDropdown !== dropdownMenu) {
-                    openDropdown.classList.remove('show');
-                }
-                dropdownMenu.classList.toggle('show');
-                openDropdown = dropdownMenu.classList.contains('show') ? dropdownMenu : null;
-            });
+        userProfileIcon.addEventListener('click', function () {
+            profileDialogOverlay.classList.remove('hidden');
         });
 
-        document.addEventListener('click', (event) => {
-            if (openDropdown && !openDropdown.closest('.dropdown-container').contains(event.target)) {
-                openDropdown.classList.remove('show');
-                openDropdown = null;
+        closeDialogBtn.addEventListener('click', function () {
+            profileDialogOverlay.classList.add('hidden');
+        });
+
+        profileDialogOverlay.addEventListener('click', function (event) {
+            if (event.target === profileDialogOverlay) {
+                profileDialogOverlay.classList.add('hidden');
             }
-        });
-
-        const dropdownMenuItems = document.querySelectorAll('.dropdown-menu button');
-        dropdownMenuItems.forEach(item => {
-            item.addEventListener('click', (event) => {
-                const action = event.target.dataset.action;
-                const timelineItem = event.target.closest('.timeline-item');
-                if (action === 'delete') {
-                    if (confirm(`Are you sure you want to delete?`)) {
-                        timelineItem.remove();
-                    }
-                }else if (action === 'edit') {
-                    const Lsurl = `../L_S_Page/index.html`;
-                    window.location.href = Lsurl;
-                }
-
-                if (openDropdown) {
-                    openDropdown.classList.remove('show');
-                    openDropdown = null;
-                }
-            });
         });
     });
 </script>
+
+<!--Dropdowm btn with js-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const container = button.closest('.dropdown-container');
+                document.querySelectorAll('.dropdown-container').forEach(c => {
+                    if (c !== container) c.classList.remove('active');
+                });
+                container.classList.toggle('active');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-container').forEach(c => c.classList.remove('active'));
+        });
+    });
+
+    function deleteItem(button) {
+        const timelineItem = button.closest('.timeline-item');
+        if (confirm('Are you sure you want to delete this item?')) {
+            timelineItem.remove();
+        }
+    }
+
+        let currentItem = null;
+
+        function update(button) {
+            currentItem = button.closest('.timeline-item');
+
+            const title = currentItem.querySelector('h6').textContent;
+            const desc = currentItem.querySelector('p').textContent;
+            const imgSrc = currentItem.querySelector('img').getAttribute('src');
+
+            document.getElementById('updateTitle').value = title;
+            document.getElementById('updateDescription').value = desc;
+            document.getElementById('imagePreview').src = imgSrc;
+
+            document.getElementById('updateModal').classList.add('active');
+        }
+        function applyUpdate() {
+            if (!currentItem) return;
+
+            const newTitle = document.getElementById('updateTitle').value;
+            const newDesc = document.getElementById('updateDescription').value;
+            const newImg = document.getElementById('updateImage').value;
+
+            currentItem.querySelector('h6').textContent = newTitle;
+            currentItem.querySelector('p').textContent = newDesc;
+            currentItem.querySelector('img').setAttribute('src', newImg);
+
+
+            console.log("New image path:", newImg);
+            console.log("Updated image element:", currentItem.querySelector('img'));
+
+            closeModal();
+        }
+
+        function closeModal() {
+            document.getElementById('updateModal').classList.remove('active');
+            currentItem = null;
+        }
+        function previewImage() {
+            const imgUrl = document.getElementById('updateImage').value;
+            document.getElementById('imagePreview').src = imgUrl;
+        }
+
+
+</script>
+
 
 </body>
 </html>

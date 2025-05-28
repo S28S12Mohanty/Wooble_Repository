@@ -17,64 +17,47 @@
 <!-- Home Section -->
 <section
         id="home"
-        class="flex flex-col md:flex-row justify-around gap-4 bg-gradient-to-r from-violet-800 to-purple-800"
+        class="flex flex-col md:flex-row justify-between gap-4 bg-gradient-to-r from-violet-800 to-purple-800"
 >
-    <div class="p-10">
-        <h2 class="text-5xl">
-            Hello I am <span class="text-blue-400" id="name">John sina</span>
-        </h2>
-        <h3 class="text-2xl font-medium mt-3" id="profession">Web Developer</h3>
+    <div class="w-full sm:w-11/12 md:w-4/5 lg:w-3/5 p-4 sm:p-6 md:p-8 lg:p-10">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl">
+            Hello I am <span class="text-blue-400" id="name">John Sina</span>
+        </h1>
+        <h3 class="text-xl sm:text-2xl font-medium mt-3" id="profession">Web Developer</h3>
         <p
-                class="tracking-widest p-1 text-base font-light leading-relaxed text-wrap sm:text-lg md:text-xl"
+                id="about-me"
+                class="text-base sm:text-lg lg:text-lg font-light leading-snug lg:leading-relaxed tracking-wide w-full break-words"
         >
-            Lorem ipsum dolor sit amet consectetur <br/>
-            adipisicing elit. Eum, a consectetur. Asperiores amet dolores sequi
-            voluptate <br/>
-            sunt eveniet? Officiis neque amet atque voluptatum cupiditate eaque.
-            <br/>
-            Suscipit molestias distinctio tempore obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, a consectetur.
+            Asperiores amet dolores sequi voluptate sunt eveniet? Officiis neque amet atque
+            voluptatum cupiditate eaque. Suscipit molestias distinctio tempore obcaecati.
         </p>
+
         <button
-                class="bg-black text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent cursor-pointer rounded"
+                class="mt-4 bg-black text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent cursor-pointer rounded"
         >
             About Me
         </button>
-        <a href="#"
-        >
-            <box-icon
-                    class="hover:cursor-pointer hover:fill-blue-400"
-                    type="logo"
-                    name="twitter"
-            ></box-icon
-            >
-        </a>
-        <a href="#"
-        >
-            <box-icon
-                    class="hover:cursor-pointer hover:fill-blue-400"
-                    name="instagram-alt"
-                    type="logo"
-            ></box-icon
-            >
-        </a>
-        <a href="#"
-        >
-            <box-icon
-                    class="hover:cursor-pointer hover:fill-blue-400"
-                    name="facebook"
-                    type="logo"
-            ></box-icon
-            >
-        </a>
+
+        <div class="flex space-x-4 mt-4">
+            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon></a>
+            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon></a>
+            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon></a>
+        </div>
     </div>
-    <div class="hidden md:block">
-        <img
-                src=""
-                alt="image not found"
-                class="h-80 w-full object-cover"
-                id="profile"
-        />
-    </div>
+
+    <section class="min-h-screen flex items-center justify-center">
+        <div class="flex-1 flex justify-center md:justify-end">
+            <img
+                    src="https://via.placeholder.com/300"
+                    alt="Profile"
+                    id="profile"
+                    style="padding: 3rem;"
+                    class="w-60 sm:w-72 md:w-[50rem] lg:w-[20rem] aspect-square shadow-lg object-cover rounded-full"
+            />
+        </div>
+    </section>
+
 </section>
 
 
@@ -233,7 +216,7 @@
 >
     <h3 class="text-3xl font-bold mb-1">Portfolio</h3>
     <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 rounded-sm"/>
-    <div class="grid md:grid-cols-2 gap-6 xl:grid-cols-3">
+    <div class="grid md:grid-cols-2 gap-6 xl:grid-cols-3 xxl:grid-cols-4">
         <img
                 src="pic1.jpg"
                 alt="img not found"
@@ -278,7 +261,7 @@
     const params = new URLSearchParams(window.location.search);
     let username = params.get('username');
     if (!username) {
-        username = 'akashjaiswal3';
+        username = 'nina-patel';
     }
 
     $.ajax({
@@ -287,19 +270,32 @@
         data: {
             username: username
         },
-        success: function(response) {
+        success: function (response) {
             console.log('API Response:', response);
             if (response.status === 'success') {
                 document.getElementById('name').innerHTML = response.data.name;
                 document.getElementById('profession').innerHTML = response.data.profession;
-                document.getElementById('profile').src ='https://wooble.org/dms/'+ response.data.profile_pic;
+
+                // for clear image
+                let image = response.data.profile_pic;
+                image = atob(image);
+                let modifiedName = image.replace('.webp', '_400.png');
+                console.log('Modified file name:', modifiedName);
+                const reEncoded = btoa(modifiedName);
+                console.log('Re-encoded file name:', reEncoded);
+
+                document.getElementById('profile').src = 'https://wooble.org/dms/' + reEncoded;
+                document.getElementById('profile-icon').src = 'https://wooble.org/dms/' + response.data.profile_pic;
+                document.getElementById('icon-name').innerHTML = response.data.name;
+                document.getElementById('about-me').innerHTML = response.data.about_description;
             }
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
             console.error('API Error:', status, error);
         }
     });
 </script>
+
 
 
 </body>
