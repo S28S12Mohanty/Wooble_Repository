@@ -17,7 +17,7 @@
 <!-- Home Section -->
 <section
         id="home"
-        class="flex flex-col md:flex-row justify-between gap-4 bg-gradient-to-r from-violet-800 to-purple-800"
+        class="flex flex-col md:flex-row justify-around gap-4 bg-gradient-to-r from-violet-800 to-purple-800"
 >
     <div class="w-full sm:w-11/12 md:w-4/5 lg:w-3/5 p-4 sm:p-6 md:p-8 lg:p-10">
         <h1 class="text-3xl sm:text-4xl md:text-5xl">
@@ -28,9 +28,10 @@
                 id="about-me"
                 class="text-base sm:text-lg lg:text-lg font-light leading-snug lg:leading-relaxed tracking-wide w-full break-words"
         >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, a consectetur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="more-text">Eum, a consectetur.
             Asperiores amet dolores sequi voluptate sunt eveniet? Officiis neque amet atque
-            voluptatum cupiditate eaque. Suscipit molestias distinctio tempore obcaecati.
+            voluptatum cupiditate eaque. Suscipit molestias distinctio tempore obcaecati.</span>
+
         </p>
 
         <button
@@ -40,13 +41,19 @@
         </button>
 
         <div class="flex space-x-4 mt-4">
-            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon></a>
-            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon></a>
-            <a href="#"><box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon></a>
+            <a href="#">
+                <box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon>
+            </a>
         </div>
     </div>
 
-    <section class="min-h-screen flex items-center justify-center">
+    <section class="flex items-center justify-center">
         <div class="flex-1 flex justify-center md:justify-end">
             <img
                     src="https://via.placeholder.com/300"
@@ -254,6 +261,20 @@
 <!-- footer Section -->
 <?php include 'components/footer.php'; ?>
 
+<script>
+    function toggleMore(button) {
+        const moreText = button.previousElementSibling;
+        if (moreText.style.display === "inline") {
+            moreText.style.display = "none";
+            button.textContent = "See more";
+        } else {
+            moreText.style.display = "inline";
+            button.textContent = "See less";
+        }
+    }
+</script>
+
+
 <!--jquery-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -261,7 +282,7 @@
     const params = new URLSearchParams(window.location.search);
     let username = params.get('username');
     if (!username) {
-        username = 'nina-patel';
+        username = 'nari-poonawala';
     }
 
     $.ajax({
@@ -276,7 +297,6 @@
                 document.getElementById('name').innerHTML = response.data.name;
                 document.getElementById('profession').innerHTML = response.data.profession;
 
-                // for clear image
                 let image = response.data.profile_pic;
                 image = atob(image);
                 let modifiedName = image.replace('.webp', '_400.png');
@@ -287,7 +307,13 @@
                 document.getElementById('profile').src = 'https://wooble.org/dms/' + reEncoded;
                 document.getElementById('profile-icon').src = 'https://wooble.org/dms/' + response.data.profile_pic;
                 document.getElementById('icon-name').innerHTML = response.data.name;
-                document.getElementById('about-me').innerHTML = response.data.about_description;
+
+                document.getElementById('about-me').innerHTML = `
+                         ${response.data.about_description.substring(0, 150)}...
+                         <span class="more-text" style="display: none">
+                         ${response.data.about_description.substring(150)}
+                          </span>
+                         <span class="see-more-button text-blue-400 cursor-pointer" onclick="toggleMore(this)">See more</span>`;
             }
         },
         error: function (xhr, status, error) {
@@ -295,7 +321,6 @@
         }
     });
 </script>
-
 
 
 </body>
