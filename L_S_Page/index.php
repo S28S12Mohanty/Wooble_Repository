@@ -202,7 +202,6 @@
 
 
 <script>
-    //  Script For Login
 
     const loginForm = document.getElementById('loginForm');
     const loginEmail = document.getElementById('loginEmail');
@@ -216,12 +215,12 @@
         // const Inputpassword = loginPassword.value;
         const remember = rememberMe.checked;
 
-        // if (remember) {
-        //     alert('Remember Me is checked');
-        // } else {
-        //     alert('Remember Me is not checked');
-        //     return;
-        // }
+        if (remember) {
+            alert('Remember Me is checked');
+        } else {
+            alert('Remember Me is not checked');
+            return;
+        }
 
 
         // console.log(`Login Email: ${Inputemail}`);

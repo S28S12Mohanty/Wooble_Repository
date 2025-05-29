@@ -37,7 +37,7 @@
         <button
                 class="mt-4 bg-black text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent cursor-pointer rounded"
         >
-            About Me
+            Check My Resume
         </button>
 
         <div class="flex space-x-4 mt-4">
