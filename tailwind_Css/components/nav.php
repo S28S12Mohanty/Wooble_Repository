@@ -1,9 +1,8 @@
-<!-- bg-blue-900/80 -->
 <?php
 $loginUrl = "../L_S_Page";
-?>
-<?php
 $Profile = "../profile/profile.php";
+$service = "service.php";
+$portfolio = "portfolio.php";
 ?>
 
 <!--Header Section-->
@@ -18,12 +17,12 @@ $Profile = "../profile/profile.php";
 
         <div class="hidden md:flex space-x-5">
             <a href="#home" class="text-gray-300 hover:text-white p-2">Home</a>
-            <a href="#services" class="text-gray-300 hover:text-white p-2">Services</a>
+            <a href="<?php echo $service;?>" class="text-gray-300 hover:text-white p-2">Services</a>
             <a href="#resume" class="text-gray-300 hover:text-white p-2">Resume</a>
-            <a href="#portfolio" class="text-gray-300 hover:text-white p-2">Portfolio</a>
+            <a href="<?php echo $portfolio;?>" class="text-gray-300 hover:text-white p-2">Portfolio</a>
             <a href="<?php echo $Profile; ?>" class="text-gray-300 hover:text-white p-2">Profile</a>
-            <a href="#contact" class="text-gray-300 hover:text-white p-2">Contact</a>
-            <a href="#"
+
+            <a href="logout.php"
                class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center flex items-center"
                role="button">
                 LogOut
@@ -55,17 +54,19 @@ $Profile = "../profile/profile.php";
         <a href="#resume" class="block text-gray-300 hover:text-white p-2">Resume</a>
         <a href="#portfolio" class="block text-gray-300 hover:text-white p-2">Portfolio</a>
         <a href="<?php echo $Profile; ?>" class="block text-gray-300 hover:text-white p-2">Profile</a>
-        <a href="#" class="block text-gray-300 hover:text-white p-2">Contact</a>
-        <button class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center flex items-center">
-            LogOut
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                 class="bi bi-box-arrow-right ml-1" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-                <path fill-rule="evenodd"
-                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-            </svg>
-        </button>
+
+        <a href="logout.php">
+            <button class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center flex items-center">
+                LogOut
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-box-arrow-right ml-1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd"
+                          d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+            </button>
+        </a>
     </div>
 </nav>
 
@@ -77,3 +78,8 @@ $Profile = "../profile/profile.php";
         menu.classList.toggle("hidden");
     });
 </script>
+
+
+
+
+

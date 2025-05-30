@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +28,7 @@
             <div class="profile d-flex align-items-center">
                 <img id="userProfileIcon" src="face.jpg" alt="User Profile" class="rounded-circle me-2"
                      style="width: 40px; height: 40px; object-fit: cover; cursor: pointer;">
-                <h6>Gerold lorem</h6>
+                <h6 id="icon-name">Gerold lorem</h6>
             </div>
         </div>
 
@@ -119,8 +122,7 @@
                                     style="margin-top: -4px"
                             >
                                 <path
-                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"
-                                />
+                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
                             </svg>
                         </span>
                     </a>
@@ -134,40 +136,59 @@
 
 <section class="first-section container">
     <div class="card">
-        <img src="images.jpeg" class="img-fluid w-100" alt="Img not found"/>
+        <img src="images.jpeg" id="banner-image" class="img-fluid w-100" alt="Img not found"/>
         <div class="card-body text-center">
-            <div class="scrolling-tabs">
-                <ul class="nav flex-nowrap">
-                    <li class="nav-link active text-dark" id="timeline">Timeline</li>
-                    <li class="nav-link text-dark" id="friends">Friends</li>
-                    <li class="nav-link text-dark" id="photos">Photos</li>
-                    <li class="nav-link text-dark" id="videos">Videos</li>
-                    <li class="nav-link text-dark">Timeline</li>
-                    <li class="nav-link text-dark">Friends</li>
-                    <li class="nav-link text-dark">Photos</li>
-                    <li class="nav-link text-dark">Videos</li>
-                    <li class="nav-link text-dark">Photos</li>
-                    <li class="nav-link text-dark">Videos</li>
-                    <li class="nav-link text-dark">Timeline</li>
-                    <li class="nav-link text-dark">Friends</li>
-                    <li class="nav-link text-dark">Photos</li>
-                    <li class="nav-link text-dark">Videos</li>
-                    <li class="nav-link text-dark">Photos</li>
-                    <li class="nav-link text-dark">Videos</li>
-                </ul>
+            <h4 id="profile-name" style="margin: -20px;">🐣</h4>
+            <p id="bio" style="margin-top: 15px">🐝🪱</p>
+            <div class="profession-item" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+            </svg>
+                <p id="profession">hello</p>
+            </div>
+            <div class="location-item" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <p id="location">hello</p>
             </div>
         </div>
         <div class="image-class">
             <div class="image-create">
                 <img
                         src="face.jpg"
+                        id="profile-image"
                         alt="img not found"
                         class="position-absolute start-50 translate-middle rounded-circle object-fit-cover border border-5 border-white"
                 />
-            </div>
+            </div>🐝
         </div>
     </div>
 </section>
+
+
+<!--scrolling-->
+<div class="scrolling-tabs">
+    <ul class="nav flex-nowrap">
+        <li class="nav-link active text-dark" id="timeline">Timeline</li>
+        <li class="nav-link text-dark" id="friends">Friends</li>
+        <li class="nav-link text-dark" id="photos">Photos</li>
+        <li class="nav-link text-dark" id="videos">Videos</li>
+        <li class="nav-link text-dark">Timeline</li>
+        <li class="nav-link text-dark">Friends</li>
+        <li class="nav-link text-dark">Photos</li>
+        <li class="nav-link text-dark">Videos</li>
+        <li class="nav-link text-dark">Photos</li>
+        <li class="nav-link text-dark">Videos</li>
+        <li class="nav-link text-dark">Timeline</li>
+        <li class="nav-link text-dark">Friends</li>
+        <li class="nav-link text-dark">Photos</li>
+        <li class="nav-link text-dark">Videos</li>
+        <li class="nav-link text-dark">Photos</li>
+        <li class="nav-link text-dark">Videos</li>
+    </ul>
+</div>
 
 <!-- TimeLine -->
 
@@ -677,49 +698,125 @@
         }
     }
 
-        let currentItem = null;
+    let currentItem = null;
 
-        function update(button) {
-            currentItem = button.closest('.timeline-item');
+    function update(button) {
+        currentItem = button.closest('.timeline-item');
 
-            const title = currentItem.querySelector('h6').textContent;
-            const desc = currentItem.querySelector('p').textContent;
-            const imgSrc = currentItem.querySelector('img').getAttribute('src');
+        const title = currentItem.querySelector('h6').textContent;
+        const desc = currentItem.querySelector('p').textContent;
+        const imgSrc = currentItem.querySelector('img').getAttribute('src');
 
-            document.getElementById('updateTitle').value = title;
-            document.getElementById('updateDescription').value = desc;
-            document.getElementById('imagePreview').src = imgSrc;
+        document.getElementById('updateTitle').value = title;
+        document.getElementById('updateDescription').value = desc;
+        document.getElementById('imagePreview').src = imgSrc;
 
-            document.getElementById('updateModal').classList.add('active');
-        }
-        function applyUpdate() {
-            if (!currentItem) return;
+        document.getElementById('updateModal').classList.add('active');
+    }
 
-            const newTitle = document.getElementById('updateTitle').value;
-            const newDesc = document.getElementById('updateDescription').value;
-            const newImg = document.getElementById('updateImage').value;
+    function applyUpdate() {
+        if (!currentItem) return;
 
-            currentItem.querySelector('h6').textContent = newTitle;
-            currentItem.querySelector('p').textContent = newDesc;
-            currentItem.querySelector('img').setAttribute('src', newImg);
+        const newTitle = document.getElementById('updateTitle').value;
+        const newDesc = document.getElementById('updateDescription').value;
+        const newImg = document.getElementById('updateImage').value;
 
-
-            console.log("New image path:", newImg);
-            console.log("Updated image element:", currentItem.querySelector('img'));
-
-            closeModal();
-        }
-
-        function closeModal() {
-            document.getElementById('updateModal').classList.remove('active');
-            currentItem = null;
-        }
-        function previewImage() {
-            const imgUrl = document.getElementById('updateImage').value;
-            document.getElementById('imagePreview').src = imgUrl;
-        }
+        currentItem.querySelector('h6').textContent = newTitle;
+        currentItem.querySelector('p').textContent = newDesc;
+        currentItem.querySelector('img').setAttribute('src', newImg);
 
 
+        console.log("New image path:", newImg);
+        console.log("Updated image element:", currentItem.querySelector('img'));
+
+        closeModal();
+    }
+
+    function closeModal() {
+        document.getElementById('updateModal').classList.remove('active');
+        currentItem = null;
+    }
+
+    function previewImage() {
+        const imgUrl = document.getElementById('updateImage').value;
+        document.getElementById('imagePreview').src = imgUrl;
+    }
+
+
+</script>
+
+
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    (function () {
+        const username = sessionStorage.getItem('username');
+        const email = sessionStorage.getItem('email');
+        console.log(username);
+        console.log(email);
+
+        $.ajax({
+            url: 'https://wooble.io/api/portfolio/FetchUserData.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+                email: email,
+            },
+            beforeSend: function () {
+                console.log('Sending user data' + username);
+            },
+            success: function (response) {
+                console.log('API Response:', response);
+                if (response.status === 'success') {
+
+                    document.getElementById('icon-name').innerHTML = response.data.name;
+                    document.getElementById('profile-name').innerHTML = response.data.name;
+                    document.getElementById('bio').innerHTML = response.data.bio;
+                    document.getElementById('profession').innerHTML = response.data.profession;
+                    document.getElementById('location').innerHTML = response.data.location;
+
+
+                    // banner image
+                    let image = response.data.banner_img;
+                    // console.log('Banner image raw value:', image);
+                    document.getElementById('banner-image').src = image;
+
+                    // icon-image
+                    let iconimage = response.data.profile_pic;
+                    console.log('https://wooble.org/dms/'+iconimage);
+                    document.getElementById('userProfileIcon').src ='https://wooble.org/dms/'+ iconimage;
+
+                    let  profileimage = response.data.profile_pic;
+                    console.log('https://wooble.org/dms/'+iconimage);
+                    document.getElementById('profile-image').src ='https://wooble.org/dms/'+ profileimage;
+
+
+
+
+
+
+                    // // document.getElementById('name').innerHTML = response.data.name;
+                    // // document.getElementById('profession').innerHTML = response.data.profession;
+                    //
+                    // // let image = response.data.banner_img;
+                    // // image = atob(image);
+                    // // let modifiedName = image.replace('.webp', '_400.png');
+                    // // console.log('Modified file name:', modifiedName);
+                    // // const reEncoded = btoa(modifiedName);
+                    // // console.log('Re-encoded file name:', reEncoded);
+                    //
+                    // // document.getElementById('userProfileIcon').src = 'https://wooble.org/dms/' + response.data.;
+                    // document.getElementById('userProfileIcon').src = 'https://wooble.org/dms/' + response.data.banner_img;
+                    // document.getElementById('icon-name').innerHTML = response.data.name;
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('API Error:', xhr.responseText, status, error);
+            }
+        });
+    })();
 </script>
 
 

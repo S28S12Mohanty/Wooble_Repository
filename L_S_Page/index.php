@@ -12,7 +12,7 @@
             rel="stylesheet"
     />
     <style>
-        /* Optional: Add some custom styling */
+
         .login-signup-container {
             margin-top: 50px;
         }
@@ -215,12 +215,12 @@
         // const Inputpassword = loginPassword.value;
         const remember = rememberMe.checked;
 
-        if (remember) {
-            alert('Remember Me is checked');
-        } else {
-            alert('Remember Me is not checked');
-            return;
-        }
+        // if (remember) {
+        //     alert('Remember Me is checked');
+        // } else {
+        //     alert('Remember Me is not checked');
+        //     return;
+        // }
 
 
         // console.log(`Login Email: ${Inputemail}`);

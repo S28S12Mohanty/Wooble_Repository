@@ -296,6 +296,8 @@
             if (response.status === 'success') {
                 document.getElementById('name').innerHTML = response.data.name;
                 document.getElementById('profession').innerHTML = response.data.profession;
+                document.getElementById('about-me').innerHTML = response.data.about_description;
+
 
                 let image = response.data.profile_pic;
                 image = atob(image);
@@ -307,13 +309,6 @@
                 document.getElementById('profile').src = 'https://wooble.org/dms/' + reEncoded;
                 document.getElementById('profile-icon').src = 'https://wooble.org/dms/' + response.data.profile_pic;
                 document.getElementById('icon-name').innerHTML = response.data.name;
-
-                document.getElementById('about-me').innerHTML = `
-                         ${response.data.about_description.substring(0, 150)}...
-                         <span class="more-text" style="display: none">
-                         ${response.data.about_description.substring(150)}
-                          </span>
-                         <span class="see-more-button text-blue-400 cursor-pointer" onclick="toggleMore(this)">See more</span>`;
             }
         },
         error: function (xhr, status, error) {
@@ -321,6 +316,9 @@
         }
     });
 </script>
+
+
+
 
 
 </body>

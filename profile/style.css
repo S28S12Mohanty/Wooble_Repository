@@ -200,6 +200,14 @@ body {
     height: 18px;
     width: 18px;
 }
+.profession-item ,
+.location-item{
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13px;
+}
+
 
 .timeline-section {
     padding: 20px;
