@@ -91,9 +91,10 @@ body {
 }
 
 .scrolling-tabs {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    margin: 0 auto;
+    /*overflow-x: auto;*/
+    /*white-space: nowrap;*/
+    /*-webkit-overflow-scrolling: touch;*/
 }
 .nav-item{
     height: 25px;
@@ -213,6 +214,10 @@ body {
     padding: 20px;
     width: 60%;
     margin: 0 auto;
+}
+.button{
+    display: flex;
+    gap: 10px;
 }
 
 .flex {
@@ -352,7 +357,10 @@ body {
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.8em;
-    color: #fff;
+    border: none;
+}
+.timeline-tag:hover{
+    opacity: 0.7;
 }
 
 .tag-certification {
@@ -373,15 +381,6 @@ body {
 .tag-education:hover {
     opacity: 0.9;
 }
-
-
-
-
-
-
-
-
-
 .videos-item {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -543,7 +542,8 @@ body {
         margin: 2rem auto;
     }
 
-    .timeline-item {
+    .timeline-item ,
+    .button{
         flex-direction: column;
     }
 

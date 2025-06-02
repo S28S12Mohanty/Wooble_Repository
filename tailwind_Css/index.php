@@ -218,44 +218,32 @@
 
 <!-- Portfolio Section -->
 <section
-        class="py-20 px-6 sm:px-20 text-center bg-gradient-to-r from-purple-800 to-violet-800"
+        class="py-20 px-4 sm:px-6 lg:px-12 xl:px-20 text-center bg-gradient-to-r from-purple-800 to-violet-800"
         id="portfolio"
 >
-    <h3 class="text-3xl font-bold mb-1">Portfolio</h3>
-    <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 rounded-sm"/>
-    <div class="grid md:grid-cols-2 gap-6 xl:grid-cols-3 xxl:grid-cols-4">
-        <img
-                src="pic1.jpg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
-        <img
-                src="pic2.jpeg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
-        <img
-                src="pic3.jpeg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
-        <img
-                src="pic4.jpeg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
-        <img
-                src="pic5.jpeg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
-        <img
-                src="pic6.jpeg"
-                alt="img not found"
-                class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300 hover:shadow-[0_8px_10px_rgba(0,0,0,0.6)] shadow-[0_8px_10px_rgba(0,0,0,0.4)] rounded-2xl hover:scale-110 cursor-pointer"
-        />
+    <div class="max-w-7xl mx-auto">
+        <h3 class="text-3xl font-bold mb-1 text-white">Portfolio</h3>
+        <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 rounded-sm" />
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-6 gap-6 mx-auto justify-items-center mt-12 max-w-full">
+            <img src="pic1.jpg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic2.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic3.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic4.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic5.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic6.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic1.jpg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic2.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic3.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic4.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic5.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+            <img src="pic6.jpeg" alt="img not found" class="h-60 w-full sm:h-48 sm:w-96 object-cover transition-transform duration-300  shadow-md hover:scale-105 hover:shadow-2xl rounded-2xl  cursor-pointer" />
+        </div>
     </div>
 </section>
+
+
+
 
 
 <!-- footer Section -->

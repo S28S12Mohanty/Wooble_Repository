@@ -90,6 +90,53 @@
                     0 20px 25px rgba(0, 0, 0, 0.15),
                     0 10px 10px rgba(0, 0, 0, 0.1);
         }
+
+
+        @media (min-width: 768px) {
+            .image-wrapper h1 {
+                font-size: 3.5rem;
+                letter-spacing: 8px;
+            }
+
+            .card-wrapper {
+                gap: 1.5rem;
+                top: 65%;
+            }
+
+            .card {
+                width: 180px;
+                height: 250px;
+                font-size: 1rem;
+            }
+
+            .card:hover {
+                transform: rotateY(12deg) rotateX(4deg) scale(1.04);
+            }
+        }
+
+        /* Desktops (e.g., 1024px and up) */
+        @media (min-width: 1024px) {
+            .image-wrapper h1 {
+                font-size: 4rem;
+                letter-spacing: 12px;
+            }
+
+            .card-wrapper {
+                gap: 2rem;
+                top: 70%; /* Original desktop position */
+                width: auto; /* Let content dictate width */
+            }
+
+            .card {
+                width: 200px; /* Original card width */
+                height: 300px; /* Original card height */
+                font-size: 1.2rem;
+            }
+
+            .card:hover {
+                transform: rotateY(15deg) rotateX(5deg) scale(1.05); /* Original hover effect */
+            }
+        }
     </style>
 </head>
 <body>

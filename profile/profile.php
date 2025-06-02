@@ -37,11 +37,11 @@
             <div class="profile-dialog-content">
                 <button class="close-btn" id="closeDialogBtn">&times;</button>
                 <div class="profile-dialog-header">
-                    <img src="face.jpg" alt="User Profile">
+                    <img src="face.jpg" id="userprofileicon2" alt="User Profile">
                     <div>
-                        <h5>173 Gerold lorem</h5>
-                        <p>User Id: 60040786769</p>
-                        <p>Gerold@wooble.org</p>
+                        <h5 id="name">Gerold lorem</h5>
+                        <p id="user_id">User Id: 60040786769</p>
+                        <p id="mail">Gerold@wooble.org</p>
                     </div>
                 </div>
             </div>
@@ -58,8 +58,7 @@
                         class="form-control me-2"
                         type="search"
                         placeholder="Search here people and pages"
-                        aria-label="Search"
-                />
+                        aria-label="Search"/>
                 <button class="btn btn-outline-success" type="submit">
                     Search
                 </button>
@@ -76,8 +75,7 @@
                                     fill="currentColor"
                                     class="bi bi-person-circle"
                                     viewBox="0 0 16 16"
-                                    style="margin-top: -4px"
-                            >
+                                    style="margin-top: -4px">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                 <path
                                         fill-rule="evenodd"
@@ -154,6 +152,18 @@
                 <p id="location">hello</p>
             </div>
         </div>
+
+        <hr>
+        <div class="scrolling-tabs card-body">
+            <ul class="nav flex-nowrap">
+                <li class="nav-link active text-dark" id="timeline">Timeline</li>
+                <li class="nav-link text-dark" id="friends">Friends</li>
+                <li class="nav-link text-dark" id="photos">Photos</li>
+                <li class="nav-link text-dark" id="videos">Videos</li>
+            </ul>
+        </div>
+
+
         <div class="image-class">
             <div class="image-create">
                 <img
@@ -162,33 +172,10 @@
                         alt="img not found"
                         class="position-absolute start-50 translate-middle rounded-circle object-fit-cover border border-5 border-white"
                 />
-            </div>🐝
+            </div>
         </div>
     </div>
 </section>
-
-
-<!--scrolling-->
-<div class="scrolling-tabs">
-    <ul class="nav flex-nowrap">
-        <li class="nav-link active text-dark" id="timeline">Timeline</li>
-        <li class="nav-link text-dark" id="friends">Friends</li>
-        <li class="nav-link text-dark" id="photos">Photos</li>
-        <li class="nav-link text-dark" id="videos">Videos</li>
-        <li class="nav-link text-dark">Timeline</li>
-        <li class="nav-link text-dark">Friends</li>
-        <li class="nav-link text-dark">Photos</li>
-        <li class="nav-link text-dark">Videos</li>
-        <li class="nav-link text-dark">Photos</li>
-        <li class="nav-link text-dark">Videos</li>
-        <li class="nav-link text-dark">Timeline</li>
-        <li class="nav-link text-dark">Friends</li>
-        <li class="nav-link text-dark">Photos</li>
-        <li class="nav-link text-dark">Videos</li>
-        <li class="nav-link text-dark">Photos</li>
-        <li class="nav-link text-dark">Videos</li>
-    </ul>
-</div>
 
 <!-- TimeLine -->
 
@@ -196,108 +183,46 @@
 
     <div class="timeline-section">
 
-        <div class="timeline-item">
-            <div class="timeline-date">1</div>
-            <div class="timeline-card flex">
-                <img src="face.jpg" alt="Image" width="50">
-                <div class="item">
-                    <h6>Laravel</h6>
-                    <p>CTTC</p>
-                    <button class="timeline-tag tag-certification">certification</button>
-                    <button class="timeline-tag tag-education">education</button>
-                    <div class="dropdown-container">
-                        <button class="dropdown-button" aria-label="More options">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                 viewBox="0 0 16 16">
-                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button onclick="update(this)">Update Item</button>
-                            <button onclick="deleteItem(this)">Delete Item</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <script>
+            const timelineData = [
+                { date: '1', title: 'Laravel', desc: 'CTTC', img: 'face.jpg', button: ['certification', 'education'] },
+                { date: '2', title: 'React', desc: 'Udemy', img: 'face.jpg', button: ['certification', 'education'] },
+                { date: '3', title: 'Python', desc: 'Coursera', img: 'face.jpg', button: ['certification', 'education'] },
+                { date: '4', title: 'Node.js', desc: 'Codecademy', img: 'face.jpg', button: ['certification', 'education'] },
+            ];
 
-        <div class="timeline-item">
-            <div class="timeline-date">1</div>
-            <div class="timeline-card flex">
-                <img src="face.jpg" alt="Image" width="50">
-                <div class="item">
-                    <h6>Laravel</h6>
-                    <p>CTTC</p>
-                    <button class="timeline-tag tag-certification">certification</button>
-                    <button class="timeline-tag tag-education">education</button>
-                    <div class="dropdown-container">
-                        <button class="dropdown-button" aria-label="More options">
-                            <!-- SVG icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                 viewBox="0 0 16 16">
-                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button onclick="update()">Update Item</button>
-                            <button onclick="deleteItem(this)">Delete Item</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="timeline-item">
-            <div class="timeline-date">1</div>
-            <div class="timeline-card flex">
-                <img src="face.jpg" alt="Image" width="50">
-                <div class="item">
-                    <h6>Laravel</h6>
-                    <p>CTTC</p>
-                    <button class="timeline-tag tag-certification">certification</button>
-                    <button class="timeline-tag tag-education">education</button>
-                    <div class="dropdown-container">
-                        <button class="dropdown-button" aria-label="More options">
-                            <!-- SVG icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                 viewBox="0 0 16 16">
-                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button onclick="update()">Update Item</button>
-                            <button onclick="deleteItem(this)">Delete Item</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            const timelineSection = document.querySelector('.timeline-section');
 
-        <div class="timeline-item">
-            <div class="timeline-date">1</div>
-            <div class="timeline-card flex">
-                <img src="face.jpg" alt="Image" width="50">
-                <div class="item">
-                    <h6>Laravel</h6>
-                    <p>CTTC</p>
-                    <button class="timeline-tag tag-certification">certification</button>
-                    <button class="timeline-tag tag-education">education</button>
-                    <div class="dropdown-container">
-                        <button class="dropdown-button" aria-label="More options">
-                            <!-- SVG icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                 viewBox="0 0 16 16">
-                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-menu">
-                            <button onclick="update()">Update Item</button>
-                            <button onclick="deleteItem(this)">Delete Item</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            timelineData.forEach((item, index) => {
+                const timelineItem = document.createElement('div');
+                timelineItem.className = 'timeline-item';
+                timelineItem.innerHTML = `
+    <div class="timeline-date">${item.date}</div>
+    <div class="timeline-card flex">
+      <img src="${item.img}" alt="Image" width="50">
+      <div class="item">
+        <h6>${item.title}</h6>
+        <p>${item.desc}</p>
+        ${item.button.map(tag => `<div class='button'> <button class="timeline-tag">${tag}</button>`).join('')}</div>
+        <div class="dropdown-container">
+          <button class="dropdown-button" aria-label="More options">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <button onclick="update(this)">Update Item</button>
+            <button onclick="deleteItem(this)">Delete Item</button>
+          </div>
         </div>
+      </div>
+    </div>
+  `;
+                timelineSection.appendChild(timelineItem);
+            });
+        </script>
+
 
         <!-- Update Modal -->
         <div id="updateModal" class="modal-overlay">
@@ -309,8 +234,8 @@
                 <label>Description:</label>
                 <input type="text" id="updateDescription"><br>
 
-                <label>Image URL:</label>
-                <input type="text" id="updateImage" oninput="previewImage()"><br>
+                <label>Image File:</label>
+                <input type="file" id="updateImageFile" accept="image/*" onchange="previewImageFromFile()"><br>
                 <img id="imagePreview" src="" width="100">
 
                 <div class="btn">
@@ -324,13 +249,6 @@
 
     </div>
 
-
-    <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"-->
-    <!--             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"-->
-    <!--             class="feather feather-plus">-->
-    <!--            <line x1="12" y1="5" x2="12" y2="19"></line>-->
-    <!--            <line x1="5" y1="12" x2="19" y2="12"></line>-->
-    <!--        </svg>-->
 </div>
 
 
@@ -345,7 +263,7 @@
         <div>
             <header class="navbar navbar-expand-lg bg-light p-2">
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">James's Friends (86)</span>
+                    <span class="navbar-brand mb-0 h2" id="friends_name">James</span><p>'s Friends</p>
 
                     <form class="d-flex ms-auto" role="search">
                         <input
@@ -524,40 +442,38 @@
 
 <!-- Photos -->
 <div id="photosContent" class="content-section container my-4" style="display: none;">
-    <div class="row g-3">
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img1.jpeg" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img2.webp" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img3.jpeg" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img4.jpeg" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img1.jpeg" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
-            <div class="image-wrapper">
-                <img src="img2.webp" alt="Img not found" class="img-fluid rounded shadow-sm"/>
-            </div>
-        </div>
-    </div>
+    <div id="galleryRow" class="row g-3"></div>
 </div>
 
+<script>
+    const images = [
+        'img1.jpeg',
+        'img2.webp',
+        'img3.jpeg',
+        'img4.jpeg',
+        'img1.jpeg',
+        'img2.webp'
+    ];
+
+    const galleryRow = document.getElementById('galleryRow');
+
+    images.forEach(src => {
+        const colDiv = document.createElement('div');
+        colDiv.className = 'col-6 col-sm-4 col-md-3 col-xl-2';
+
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.className = 'image-wrapper';
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Img not found';
+        img.className = 'img-fluid rounded shadow-sm';
+
+        wrapperDiv.appendChild(img);
+        colDiv.appendChild(wrapperDiv);
+        galleryRow.appendChild(colDiv);
+    });
+</script>
 
 <!-- Videos -->
 <div id="videosContent" class="content-section container my-4" style="display: none;">
@@ -719,27 +635,38 @@
 
         const newTitle = document.getElementById('updateTitle').value;
         const newDesc = document.getElementById('updateDescription').value;
-        const newImg = document.getElementById('updateImage').value;
+        const previewImgSrc = document.getElementById('imagePreview').src; // Get the preview image src
 
         currentItem.querySelector('h6').textContent = newTitle;
         currentItem.querySelector('p').textContent = newDesc;
-        currentItem.querySelector('img').setAttribute('src', newImg);
+        currentItem.querySelector('img').setAttribute('src', previewImgSrc);
 
-
-        console.log("New image path:", newImg);
+        console.log("New image path:", previewImgSrc);
         console.log("Updated image element:", currentItem.querySelector('img'));
 
         closeModal();
     }
+
 
     function closeModal() {
         document.getElementById('updateModal').classList.remove('active');
         currentItem = null;
     }
 
-    function previewImage() {
-        const imgUrl = document.getElementById('updateImage').value;
-        document.getElementById('imagePreview').src = imgUrl;
+    function previewImageFromFile() {
+        const fileInput = document.getElementById('updateImageFile');
+        const preview = document.getElementById('imagePreview');
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = '';
+        }
     }
 
 
@@ -776,6 +703,13 @@
                     document.getElementById('bio').innerHTML = response.data.bio;
                     document.getElementById('profession').innerHTML = response.data.profession;
                     document.getElementById('location').innerHTML = response.data.location;
+                    document.getElementById('user_id').innerHTML = response.data.user_id;
+                    document.getElementById('name').innerHTML = response.data.name;
+                    document.getElementById('mail').innerHTML = response.data.email;
+                    document.getElementById('friends_name').innerHTML = response.data.name;
+
+
+
 
 
                     // banner image
@@ -785,31 +719,18 @@
 
                     // icon-image
                     let iconimage = response.data.profile_pic;
-                    console.log('https://wooble.org/dms/'+iconimage);
+                    // console.log('https://wooble.org/dms/'+iconimage);
                     document.getElementById('userProfileIcon').src ='https://wooble.org/dms/'+ iconimage;
+
+                    let iconimage2 = response.data.profile_pic;
+                    // console.log('https://wooble.org/dms/'+iconimage);
+                    document.getElementById('userprofileicon2').src ='https://wooble.org/dms/'+ iconimage2;
 
                     let  profileimage = response.data.profile_pic;
                     console.log('https://wooble.org/dms/'+iconimage);
                     document.getElementById('profile-image').src ='https://wooble.org/dms/'+ profileimage;
 
 
-
-
-
-
-                    // // document.getElementById('name').innerHTML = response.data.name;
-                    // // document.getElementById('profession').innerHTML = response.data.profession;
-                    //
-                    // // let image = response.data.banner_img;
-                    // // image = atob(image);
-                    // // let modifiedName = image.replace('.webp', '_400.png');
-                    // // console.log('Modified file name:', modifiedName);
-                    // // const reEncoded = btoa(modifiedName);
-                    // // console.log('Re-encoded file name:', reEncoded);
-                    //
-                    // // document.getElementById('userProfileIcon').src = 'https://wooble.org/dms/' + response.data.;
-                    // document.getElementById('userProfileIcon').src = 'https://wooble.org/dms/' + response.data.banner_img;
-                    // document.getElementById('icon-name').innerHTML = response.data.name;
                 }
             },
             error: function (xhr, status, error) {
