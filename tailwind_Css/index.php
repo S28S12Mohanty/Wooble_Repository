@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,11 +30,10 @@
                 id="about-me"
                 class="text-base sm:text-lg lg:text-lg font-light leading-snug lg:leading-relaxed tracking-wide w-full break-words"
         >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="more-text">Eum, a consectetur.
-            Asperiores amet dolores sequi voluptate sunt eveniet? Officiis neque amet atque
-            voluptatum cupiditate eaque. Suscipit molestias distinctio tempore obcaecati.</span>
-
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Eum, a consectetur. Asperiores amet dolores sequi voluptate sunt eveniet? Officiis neque amet atque voluptatum cupiditate eaque. Suscipit molestias distinctio tempore obcaecati.
         </p>
+
 
         <button
                 class="mt-4 bg-black text-sm hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent cursor-pointer rounded"
@@ -248,19 +249,6 @@
 
 <!-- footer Section -->
 <?php include 'components/footer.php'; ?>
-
-<script>
-    function toggleMore(button) {
-        const moreText = button.previousElementSibling;
-        if (moreText.style.display === "inline") {
-            moreText.style.display = "none";
-            button.textContent = "See more";
-        } else {
-            moreText.style.display = "inline";
-            button.textContent = "See less";
-        }
-    }
-</script>
 
 
 <!--jquery-->

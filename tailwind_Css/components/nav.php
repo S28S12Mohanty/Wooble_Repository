@@ -1,8 +1,6 @@
 <?php
 $loginUrl = "../L_S_Page";
 $Profile = "../profile/profile.php";
-$service = "service.php";
-$portfolio = "portfolio.php";
 ?>
 
 <!--Header Section-->
@@ -17,10 +15,10 @@ $portfolio = "portfolio.php";
 
         <div class="hidden md:flex space-x-5">
             <a href="#home" class="text-gray-300 hover:text-white p-2">Home</a>
-            <a href="<?php echo $service;?>" class="text-gray-300 hover:text-white p-2">Services</a>
+            <a href="../tailwind_Css/Service.php" class="text-gray-300 hover:text-white p-2">Services</a>
             <a href="#resume" class="text-gray-300 hover:text-white p-2">Resume</a>
-            <a href="<?php echo $portfolio;?>" class="text-gray-300 hover:text-white p-2">Portfolio</a>
-            <a href="<?php echo $Profile; ?>" class="text-gray-300 hover:text-white p-2">Profile</a>
+            <a href="../tailwind_Css/portfolio.php" class="text-gray-300 hover:text-white p-2">Portfolio</a>
+            <a href="../profile/profile.php" class="text-gray-300 hover:text-white p-2">Profile</a>
 
             <a href="logout.php"
                class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center flex items-center"
@@ -50,10 +48,10 @@ $portfolio = "portfolio.php";
     </div>
     <div id="menu" class="hidden flex-col md:hidden">
         <a href="#home" class="block text-gray-300 hover:text-white p-2">Home</a>
-        <a href="#services" class="block text-gray-300 hover:text-white p-2">Services</a>
+        <a href="../tailwind_Css/Service.php" class="block text-gray-300 hover:text-white p-2">Services</a>
         <a href="#resume" class="block text-gray-300 hover:text-white p-2">Resume</a>
-        <a href="#portfolio" class="block text-gray-300 hover:text-white p-2">Portfolio</a>
-        <a href="<?php echo $Profile; ?>" class="block text-gray-300 hover:text-white p-2">Profile</a>
+        <a href="../tailwind_Css/portfolio.php" class="block text-gray-300 hover:text-white p-2">Portfolio</a>
+        <a href="../profile/profile.php" class="block text-gray-300 hover:text-white p-2">Profile</a>
 
         <a href="logout.php">
             <button class="hover:cursor-pointer text-white font-bold p-2 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-white text-center flex items-center">

@@ -49,10 +49,10 @@
         <!-- Links Column 1 -->
         <ul class="flex flex-col space-y-2 text-center lg:text-left">
             <li><a href="#home" class="hover:underline">Home</a></li>
-            <li><a href="#services" class="hover:underline">Services</a></li>
+            <li><a href="../tailwind_Css/Service.php" class="hover:underline">Services</a></li>
             <li><a href="#resume" class="hover:underline">Resume</a></li>
-            <li><a href="#portfolio" class="hover:underline">Portfolio</a></li>
-            <li><a href="#" class="hover:underline">Blog</a></li>
+            <li><a href="../tailwind_Css/portfolio.php" class="hover:underline">Portfolio</a></li>
+            <li><a href="../profile/profile.php" class="hover:underline">Profile</a></li>
         </ul>
 
         <!-- Divider -->
@@ -78,7 +78,6 @@
             <li>
                 <a href="../Cancellation-and-Refund%20Policy" class="hover:underline">Cancellation & Refund Policy</a>
             </li>
-            <li><a href="#" class="hover:underline">Blog</a></li>
         </ul>
 
         <!-- Divider -->

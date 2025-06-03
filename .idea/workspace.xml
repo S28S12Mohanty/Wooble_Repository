@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add commit">
-      <change afterPath="$PROJECT_DIR$/button.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/landing_Page/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/landing_Page/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/profile/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind_Css/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind_Css/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind_Css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/portfolio.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,9 @@
       <workItem from="1748437982204" duration="45000" />
       <workItem from="1748492553389" duration="21661000" />
       <workItem from="1748576931716" duration="23059000" />
-      <workItem from="1748836855311" duration="20065000" />
+      <workItem from="1748836855311" duration="20847000" />
+      <workItem from="1748923284765" duration="8167000" />
+      <workItem from="1748932979232" duration="7234000" />
     </task>
     <task id="LOCAL-00001" summary="Add new commit">
       <option name="closed" value="true" />
@@ -197,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748610613041</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add commit">
+      <option name="closed" value="true" />
+      <created>1748869688667</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748869688667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
