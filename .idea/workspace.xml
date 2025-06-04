@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add commit">
+    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add new commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/profile/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind_Css/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind_Css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind_Css/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/portfolio.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +106,8 @@
       <workItem from="1748836855311" duration="20847000" />
       <workItem from="1748923284765" duration="8167000" />
       <workItem from="1748932979232" duration="7234000" />
+      <workItem from="1748954158413" duration="1037000" />
+      <workItem from="1749009482183" duration="25194000" />
     </task>
     <task id="LOCAL-00001" summary="Add new commit">
       <option name="closed" value="true" />
@@ -206,17 +205,25 @@
       <option name="project" value="LOCAL" />
       <updated>1748869688667</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add new commit">
+      <option name="closed" value="true" />
+      <created>1748955617029</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748955617029</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add new commit" />
     <MESSAGE value="Add another commit" />
     <MESSAGE value="Add commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add commit" />
+    <MESSAGE value="Add new commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

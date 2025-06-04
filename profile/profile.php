@@ -138,15 +138,17 @@
         <div class="card-body text-center">
             <h4 id="profile-name" style="margin: -20px;">🐣</h4>
             <p id="bio" style="margin-top: 15px">🐝🪱</p>
-            <div class="profession-item" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
-                <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
-            </svg>
+            <div class="profession-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+                    <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+                </svg>
                 <p id="profession">hello</p>
             </div>
-            <div class="location-item" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <div class="location-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
                 </svg>
                 <p id="location">hello</p>
@@ -157,7 +159,7 @@
         <div class="scrolling-tabs card-body">
             <ul class="nav flex-nowrap">
                 <li class="nav-link active text-dark" id="timeline">Timeline</li>
-                <li class="nav-link text-dark" id="friends">Friends</li>
+                <li class="nav-link text-dark" id="projects">Projects</li>
                 <li class="nav-link text-dark" id="photos">Photos</li>
                 <li class="nav-link text-dark" id="videos">Videos</li>
             </ul>
@@ -182,46 +184,6 @@
 <div id="timelineContent" class="content-section">
 
     <div class="timeline-section">
-
-        <script>
-            const timelineData = [
-                { date: '1', title: 'Laravel', desc: 'CTTC', img: 'face.jpg', button: ['certification', 'education'] },
-                { date: '2', title: 'React', desc: 'Udemy', img: 'face.jpg', button: ['certification', 'education'] },
-                { date: '3', title: 'Python', desc: 'Coursera', img: 'face.jpg', button: ['certification', 'education'] },
-                { date: '4', title: 'Node.js', desc: 'Codecademy', img: 'face.jpg', button: ['certification', 'education'] },
-            ];
-
-
-            const timelineSection = document.querySelector('.timeline-section');
-
-            timelineData.forEach((item, index) => {
-                const timelineItem = document.createElement('div');
-                timelineItem.className = 'timeline-item';
-                timelineItem.innerHTML = `
-    <div class="timeline-date">${item.date}</div>
-    <div class="timeline-card flex">
-      <img src="${item.img}" alt="Image" width="50">
-      <div class="item">
-        <h6>${item.title}</h6>
-        <p>${item.desc}</p>
-        ${item.button.map(tag => `<div class='button'> <button class="timeline-tag">${tag}</button>`).join('')}</div>
-        <div class="dropdown-container">
-          <button class="dropdown-button" aria-label="More options">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu">
-            <button onclick="update(this)">Update Item</button>
-            <button onclick="deleteItem(this)">Delete Item</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-                timelineSection.appendChild(timelineItem);
-            });
-        </script>
 
 
         <!-- Update Modal -->
@@ -254,188 +216,11 @@
 
 <!-- Friends -->
 <section class="second-section">
-    <div
-            id="friendsContent"
-            style="display: none"
-            class="content-section"
-    >
-        <!-- search -->
-        <div>
-            <header class="navbar navbar-expand-lg bg-light p-2">
-                <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h2" id="friends_name">James</span><p>'s Friends</p>
+    <div id="projectContent" style="display: none" class="content-section">
+        <div class="cards-item" id="cardsContainer">
 
-                    <form class="d-flex ms-auto" role="search">
-                        <input
-                                class="form-control me-2"
-                                type="search"
-                                placeholder="Search..."
-                                aria-label="Search"
-                        />
-                        <button class="btn btn-outline-primary" type="submit">
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </header>
-        </div>
-
-
-        <!--Cards-->
-        <div class="container my-4">
-            <div class="row" id="cardContainer">
-
-                <script>
-                    const cardData = [
-                        {
-                            image: 'img3.jpeg',
-                            p_img: 'face.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 52,
-                            Photos: 24,
-                            Videos: 6
-                        },
-                        {
-                            image: 'img2.webp',
-                            p_img: 'face1.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 5,
-                            Photos: 20,
-                            Videos: 1
-                        },
-                        {
-                            image: 'img3.jpeg',
-                            p_img: 'face.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 2,
-                            Photos: 40,
-                            Videos: 64
-                        },
-                        {
-                            image: 'img4.jpeg',
-                            p_img: 'face1.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 34,
-                            Photos: 10,
-                            Videos: 43
-                        },
-                        {
-                            image: 'img3.jpeg',
-                            p_img: 'face.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 56,
-                            Photos: 90,
-                            Videos: 32
-                        },
-                        {
-                            image: 'img2.webp',
-                            p_img: 'face1.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 20,
-                            Photos: 210,
-                            Videos: 75
-                        },
-                        {
-                            image: 'img3.jpeg',
-                            p_img: 'face.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 64,
-                            Photos: 28,
-                            Videos: 1
-                        },
-                        {
-                            image: 'img4.jpeg',
-                            p_img: 'face1.jpg',
-                            name: 'Marina Valentine',
-                            Friends: 65,
-                            Photos: 80,
-                            Videos: 6
-                        },
-                    ];
-
-                    const container = document.getElementById("cardContainer");
-
-                    cardData.forEach((card) => {
-                        const cardHTML = `
-      <div class="col-sm-6 col-md-4 col-lg-3 mb-2">
-        <div class="card h-80">
-          <img src="${card.image}" class="w-100 object-fit-cover" alt="img not found" />
-          <span class="image-create position-relative d-block text-center" style="top: -10px;">
-             <span class="image-create">
-                      <img
-                        src="${card.p_img}"
-                        alt="img not found"
-                        class="position-absolute start-50 translate-middle rounded-circle object-fit-cover border border-5 border-white"
-                      />
-                    </span>
-          </span>
-          <div class="card-body text-center pt-5">
-            <h5 class="card-title">${card.name}</h5>
-            <p class="card-text">About Me</p>
-          </div>
-          <div class="d-flex justify-content-around card-body">
-            <div class="stat-item d-flex flex-column align-items-center">
-              <p class="fs-5 fw-bold">${card.Friends}</p><small>Friends</small>
-            </div>
-            <div class="stat-item d-flex flex-column align-items-center">
-              <p class="fs-5 fw-bold">${card.Photos}</p><small>Photos</small>
-            </div>
-            <div class="stat-item d-flex flex-column align-items-center">
-              <p class="fs-5 fw-bold">${card.Videos}</p><small>Videos</small>
-            </div>
-          </div>
-          <div class="card-body d-flex justify-content-center gap-3">
-
-           <div class="card-body">
-                      <div class="icons">
-                        <div class="icons-item">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-person-circle"
-                            viewBox="0 0 16 16"
-                          >
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                            <path
-                              fill-rule="evenodd"
-                              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                            />
-                          </svg>
-                        </div>
-                        <div class="icons-item">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="currentColor"
-                            class="bi bi-chat-left-dots"
-                            viewBox="0 0 16 16"
-                          >
-                            <path
-                              d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-                            />
-                            <path
-                              d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-          </div>
 
         </div>
-      </div>
-    `;
-                        container.innerHTML += cardHTML;
-                    });
-                </script>
-
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -513,13 +298,13 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const timeline = document.getElementById("timeline");
-        const friends = document.getElementById("friends");
+        const projects = document.getElementById("projects");
         const photos = document.getElementById("photos");
         const videos = document.getElementById("videos");
 
         const contentSections = document.querySelectorAll(".content-section");
         const timelineContent = document.getElementById("timelineContent");
-        const friendsContent = document.getElementById("friendsContent");
+        const projectContent = document.getElementById("projectContent");
         const photosContent = document.getElementById("photosContent");
         const videosContent = document.getElementById("videosContent");
 
@@ -534,9 +319,9 @@
             timelineContent.style.display = "block";
         });
 
-        friends.addEventListener("click", function () {
+        projects.addEventListener("click", function () {
             hideAllContentSections();
-            friendsContent.style.display = "block";
+            projectContent.style.display = "block";
         });
 
         photos.addEventListener("click", function () {
@@ -588,7 +373,7 @@
 
 <!--Dropdowm btn with js-->
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    function attachDropdownHandlers() {
         const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
         dropdownButtons.forEach(button => {
@@ -605,7 +390,8 @@
         document.addEventListener('click', () => {
             document.querySelectorAll('.dropdown-container').forEach(c => c.classList.remove('active'));
         });
-    });
+    }
+
 
     function deleteItem(button) {
         const timelineItem = button.closest('.timeline-item');
@@ -660,7 +446,7 @@
 
         if (file) {
             const reader = new FileReader();
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 preview.src = e.target.result;
             };
             reader.readAsDataURL(file);
@@ -706,29 +492,24 @@
                     document.getElementById('user_id').innerHTML = response.data.user_id;
                     document.getElementById('name').innerHTML = response.data.name;
                     document.getElementById('mail').innerHTML = response.data.email;
-                    document.getElementById('friends_name').innerHTML = response.data.name;
-
-
-
-
 
                     // banner image
                     let image = response.data.banner_img;
-                    // console.log('Banner image raw value:', image);
+                    console.log('Banner image raw value:', image);
                     document.getElementById('banner-image').src = image;
 
                     // icon-image
                     let iconimage = response.data.profile_pic;
                     // console.log('https://wooble.org/dms/'+iconimage);
-                    document.getElementById('userProfileIcon').src ='https://wooble.org/dms/'+ iconimage;
+                    document.getElementById('userProfileIcon').src = 'https://wooble.org/dms/' + iconimage;
 
                     let iconimage2 = response.data.profile_pic;
                     // console.log('https://wooble.org/dms/'+iconimage);
-                    document.getElementById('userprofileicon2').src ='https://wooble.org/dms/'+ iconimage2;
+                    document.getElementById('userprofileicon2').src = 'https://wooble.org/dms/' + iconimage2;
 
-                    let  profileimage = response.data.profile_pic;
-                    console.log('https://wooble.org/dms/'+iconimage);
-                    document.getElementById('profile-image').src ='https://wooble.org/dms/'+ profileimage;
+                    let profileimage = response.data.profile_pic;
+                    console.log('https://wooble.org/dms/' + iconimage);
+                    document.getElementById('profile-image').src = 'https://wooble.org/dms/' + profileimage;
 
 
                 }
@@ -737,7 +518,138 @@
                 console.error('API Error:', xhr.responseText, status, error);
             }
         });
+
+        // timeline Api
+        $.ajax({
+            url: 'https://wooble.io/api/timeline/fetch_timeline.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+                email: email,
+            },
+            beforeSend: function () {
+                console.log('Sending user data' + username);
+            },
+            success: function (response) {
+
+                if (response.success === true) {
+
+                    timeline_data(response.data);
+
+                    function timeline_data(data) {
+                        console.log('API Response timeline:', data);
+                        const timelineData = [];
+
+                        data.forEach(function (item) {
+                            timelineData.push({
+                                date: item.start_date,
+                                title: item.title,
+                                desc: item.subtitle,
+                                img: item.img,
+                                button: ['certification', 'education']
+                            });
+                        });
+
+                        console.log('timelineData:', timelineData);
+
+                        const timelineSection = document.querySelector('.timeline-section');
+
+                        timelineData.forEach((item, index) => {
+                            const timelineItem = document.createElement('div');
+                            timelineItem.className = 'timeline-item';
+                            timelineItem.innerHTML = `
+
+    <div class="timeline-card flex">
+      <img src="${item.img}" alt="Image" width="50">
+      <div class="item">
+        <div class="timeline-date">${item.date}</div>
+        <h6 id="title">${item.title}</h6>
+        <p id="subtitle">${item.desc}</p>
+        ${item.button.map(tag => `<div class='button'> <button class="timeline-tag">${tag}</button>`).join('')}</div>
+        <div class="dropdown-container">
+          <button class="dropdown-button" aria-label="More options">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+          </button>
+          <div class="dropdown-menu">
+            <button onclick="update(this)">Update Item</button>
+            <button onclick="deleteItem(this)">Delete Item</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  `;
+                            timelineSection.appendChild(timelineItem);
+
+                        });
+                        attachDropdownHandlers();
+                    }
+
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('API Error:', xhr.responseText, status, error);
+            }
+        });
+
+        // project Api
+        $.ajax({
+            url: 'https://wooble.io/api/project/fetchProject_from_username.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+            },
+            beforeSend: function () {
+                console.log('fetching project  data: ' + username);
+            },
+            success: function (response) {
+                console.log('project data is' , response);
+                if (response.status === true) {
+
+                    cards_data(response.projects);
+                    //function card_data
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('API Error:', xhr.responseText, status, error);
+            }
+        });
+
+
     })();
+
+    function cards_data(data) {
+        console.log('API Response project:', data);
+
+        const cardsData = [];
+
+        data.forEach(function (project) {
+            cardsData.push({
+                title: project.project_title,
+                description: project.project_description,
+            });
+        });
+        console.log('cardsData', cardsData);
+
+        const cardsContainer = document.getElementById("cardsContainer");
+
+        cardsData.forEach((project, index) => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "cards";
+
+            cardDiv.innerHTML = `
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+        `;
+
+            cardsContainer.appendChild(cardDiv);
+        });
+    }
 </script>
 
 

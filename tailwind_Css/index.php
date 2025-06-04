@@ -41,17 +41,10 @@
             Check My Resume
         </button>
 
-        <div class="flex space-x-4 mt-4">
-            <a href="#">
-                <box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon>
-            </a>
-            <a href="#">
-                <box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon>
-            </a>
-            <a href="#">
-                <box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon>
-            </a>
+        <div class="flex space-x-4 mt-4" id="social_icons">
+            <!--js-->
         </div>
+
     </div>
 
     <section class="flex items-center justify-center">
@@ -275,6 +268,7 @@
                 document.getElementById('about-me').innerHTML = response.data.about_description;
 
 
+
                 let image = response.data.profile_pic;
                 image = atob(image);
                 let modifiedName = image.replace('.webp', '_400.png');
@@ -285,7 +279,56 @@
                 document.getElementById('profile').src = 'https://wooble.org/dms/' + reEncoded;
                 document.getElementById('profile-icon').src = 'https://wooble.org/dms/' + response.data.profile_pic;
                 document.getElementById('icon-name').innerHTML = response.data.name;
+
+
+
+                // const socialLinks = {
+                //     twitter: response.data.twitter,
+                //     instagram: response.data.instagram,
+                //     facebook: response.data.facebook
+                // };
+                // console.log('social links are',socialLinks);
+
+                console.log('Social Links:', response.data.social_links);
+
+
+                const iconMap = {
+                    twitter: 'twitter',
+                    instagram: 'instagram-alt',
+                    facebook: 'facebook'
+                };
+                console.log(iconMap);
             }
+            const socialContainer = document.getElementById('social_icons');
+            socialContainer.innerHTML = '';
+            const socialLinks = response.data.social_links;
+            if (socialLinks) {
+                if (socialLinks.twitter) {
+                    socialContainer.innerHTML += `
+            <a href="${socialLinks.twitter}" target="_blank">
+                <box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon>
+            </a>
+        `;
+                }
+                if (socialLinks.instagram) {
+                    socialContainer.innerHTML += `
+            <a href="${socialLinks.instagram}" target="_blank">
+                <box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon>
+            </a>
+        `;
+                }
+                if (socialLinks.facebook) {
+                    socialContainer.innerHTML += `
+            <a href="${socialLinks.facebook}" target="_blank">
+                <box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon>
+            </a>
+        `;
+                }
+            }
+
+
+
+
         },
         error: function (xhr, status, error) {
             console.error('API Error:', status, error);
