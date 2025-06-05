@@ -335,17 +335,6 @@ body {
     display: flex;
 }
 
-.timeline-tag {
-    display: inline-block;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8em;
-    border: none;
-}
-.timeline-tag:hover{
-    opacity: 0.7;
-}
-
 .tag-certification {
     background-color: #198754;
     border: none;
@@ -370,14 +359,6 @@ body {
     gap: 1.5rem;
     padding: 5rem;
     margin-top: -5rem;
-}
-
-.image-wrapper img {
-    transition: transform 0.3s ease;
-}
-
-.image-wrapper img:hover {
-    transform: scale(1.03);
 }
 
 .video-wrapper {
@@ -460,10 +441,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .cards{
-        padding: 3rem;
-        width: 19rem;
-    }
+
     .timeline-card.flex {
         flex-direction: row;
         align-items: flex-start;
@@ -517,11 +495,12 @@ body {
 }
 
 @media (max-width: 575.98px) {
-   .cards{
-       padding: 2.5rem;
-       height: 20rem;
-       width: 30rem;
-   }
+
+    .first-section .nav-link{
+        padding: 6px 9px;
+
+    }
+
 
     .timeline-item ,
     .button{

@@ -40,7 +40,7 @@
         >
             Check My Resume
         </button>
-
+<!--Social icons-->
         <div class="flex space-x-4 mt-4" id="social_icons">
             <!--js-->
         </div>
@@ -268,7 +268,6 @@
                 document.getElementById('about-me').innerHTML = response.data.about_description;
 
 
-
                 let image = response.data.profile_pic;
                 image = atob(image);
                 let modifiedName = image.replace('.webp', '_400.png');
@@ -281,53 +280,38 @@
                 document.getElementById('icon-name').innerHTML = response.data.name;
 
 
+                // social icons
+                const socialContainer = document.getElementById('social_icons');
+                socialContainer.innerHTML = '';
 
-                // const socialLinks = {
-                //     twitter: response.data.twitter,
-                //     instagram: response.data.instagram,
-                //     facebook: response.data.facebook
-                // };
-                // console.log('social links are',socialLinks);
+                const socialLinks = {
+                    linkedin: response.data.social_link_1,
+                    instagram: response.data.social_link_2,
+                    facebook: response.data.social_link_3,
+                    github: response.data.social_link_4
 
-                console.log('Social Links:', response.data.social_links);
+                };
+
+                console.log('Social Links:', response.data.socialLinks);
 
 
                 const iconMap = {
-                    twitter: 'twitter',
+                    linkedin: 'linkedin',
                     instagram: 'instagram-alt',
-                    facebook: 'facebook'
+                    facebook: 'facebook',
+                    github: 'github'
                 };
-                console.log(iconMap);
-            }
-            const socialContainer = document.getElementById('social_icons');
-            socialContainer.innerHTML = '';
-            const socialLinks = response.data.social_links;
-            if (socialLinks) {
-                if (socialLinks.twitter) {
-                    socialContainer.innerHTML += `
-            <a href="${socialLinks.twitter}" target="_blank">
-                <box-icon class="hover:fill-blue-400" type="logo" name="twitter"></box-icon>
-            </a>
-        `;
-                }
-                if (socialLinks.instagram) {
-                    socialContainer.innerHTML += `
-            <a href="${socialLinks.instagram}" target="_blank">
-                <box-icon class="hover:fill-blue-400" type="logo" name="instagram-alt"></box-icon>
-            </a>
-        `;
-                }
-                if (socialLinks.facebook) {
-                    socialContainer.innerHTML += `
-            <a href="${socialLinks.facebook}" target="_blank">
-                <box-icon class="hover:fill-blue-400" type="logo" name="facebook"></box-icon>
-            </a>
-        `;
+                for (const [platform, url] of Object.entries(socialLinks)) {
+                    if (url) {
+                        const iconName = iconMap[platform];
+                        socialContainer.innerHTML += `
+                    <a href="${url}" target="_blank">
+                        <box-icon class="hover:fill-blue-400" type="logo" name="${iconName}"></box-icon>
+                    </a>
+                `;
+                    }
                 }
             }
-
-
-
 
         },
         error: function (xhr, status, error) {

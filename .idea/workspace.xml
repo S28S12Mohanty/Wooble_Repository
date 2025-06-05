@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/profile/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind_Css/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/portfolio.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +109,8 @@
       <workItem from="1748923284765" duration="8167000" />
       <workItem from="1748932979232" duration="7234000" />
       <workItem from="1748954158413" duration="1037000" />
-      <workItem from="1749009482183" duration="25194000" />
+      <workItem from="1749009482183" duration="26071000" />
+      <workItem from="1749096395213" duration="13485000" />
     </task>
     <task id="LOCAL-00001" summary="Add new commit">
       <option name="closed" value="true" />
@@ -213,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748955617029</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add new commit">
+      <option name="closed" value="true" />
+      <created>1749042183320</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749042183320</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

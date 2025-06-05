@@ -196,7 +196,7 @@
             .image-icon {
                 width: 7rem;
                 height: 7rem;
-                top: 8%;
+                top: 10%;
             }
 
             .page-container {

@@ -160,7 +160,7 @@
             <ul class="nav flex-nowrap">
                 <li class="nav-link active text-dark" id="timeline">Timeline</li>
                 <li class="nav-link text-dark" id="projects">Projects</li>
-                <li class="nav-link text-dark" id="photos">Photos</li>
+                <li class="nav-link text-dark" id="impact-zone">Impact Zone</li>
                 <li class="nav-link text-dark" id="videos">Videos</li>
             </ul>
         </div>
@@ -214,51 +214,35 @@
 </div>
 
 
-<!-- Friends -->
+<!-- Project -->
 <section class="second-section">
     <div id="projectContent" style="display: none" class="content-section">
-        <div class="cards-item" id="cardsContainer">
+        <!--        <div class="cards-item" id="cardsContainer">-->
+        <!---->
+        <!---->
+        <!--        </div>-->
 
-
+        <div class="container my-5">
+            <div id="cardsContainer" class="row justify-content-center g-4">
+                <!--script-->
+            </div>
         </div>
     </div>
 </section>
 
 
 <!-- Photos -->
-<div id="photosContent" class="content-section container my-4" style="display: none;">
-    <div id="galleryRow" class="row g-3"></div>
+<div id="impactzoneContent" class="content-section container my-4" style="display: none;">
+
+    <div class="container my-5">
+        <div id="galleryRow" class="row justify-content-center g-4">
+            <!--script-->
+        </div>
+    </div>
+
+
 </div>
 
-<script>
-    const images = [
-        'img1.jpeg',
-        'img2.webp',
-        'img3.jpeg',
-        'img4.jpeg',
-        'img1.jpeg',
-        'img2.webp'
-    ];
-
-    const galleryRow = document.getElementById('galleryRow');
-
-    images.forEach(src => {
-        const colDiv = document.createElement('div');
-        colDiv.className = 'col-6 col-sm-4 col-md-3 col-xl-2';
-
-        const wrapperDiv = document.createElement('div');
-        wrapperDiv.className = 'image-wrapper';
-
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Img not found';
-        img.className = 'img-fluid rounded shadow-sm';
-
-        wrapperDiv.appendChild(img);
-        colDiv.appendChild(wrapperDiv);
-        galleryRow.appendChild(colDiv);
-    });
-</script>
 
 <!-- Videos -->
 <div id="videosContent" class="content-section container my-4" style="display: none;">
@@ -299,13 +283,13 @@
     document.addEventListener("DOMContentLoaded", function () {
         const timeline = document.getElementById("timeline");
         const projects = document.getElementById("projects");
-        const photos = document.getElementById("photos");
+        const impactzone = document.getElementById("impact-zone");
         const videos = document.getElementById("videos");
 
         const contentSections = document.querySelectorAll(".content-section");
         const timelineContent = document.getElementById("timelineContent");
         const projectContent = document.getElementById("projectContent");
-        const photosContent = document.getElementById("photosContent");
+        const impactzoneContent = document.getElementById("impactzoneContent");
         const videosContent = document.getElementById("videosContent");
 
         function hideAllContentSections() {
@@ -324,9 +308,9 @@
             projectContent.style.display = "block";
         });
 
-        photos.addEventListener("click", function () {
+        impactzone.addEventListener("click", function () {
             hideAllContentSections();
-            photosContent.style.display = "block";
+            impactzoneContent.style.display = "block";
         });
 
         videos.addEventListener("click", function () {
@@ -546,8 +530,8 @@
                                 date: item.start_date,
                                 title: item.title,
                                 desc: item.subtitle,
-                                img: item.img,
-                                button: ['certification', 'education']
+                                img: item.img ? 'https://wooble.org/dms/' + btoa(item.img): 'https://st.depositphotos.com/2142621/2870/i/450/depositphotos_28708655-stock-photo-oh-no.jpg' ,
+                                description : item.description,
                             });
                         });
 
@@ -566,7 +550,7 @@
         <div class="timeline-date">${item.date}</div>
         <h6 id="title">${item.title}</h6>
         <p id="subtitle">${item.desc}</p>
-        ${item.button.map(tag => `<div class='button'> <button class="timeline-tag">${tag}</button>`).join('')}</div>
+            <p >${item.description}</p>
         <div class="dropdown-container">
           <button class="dropdown-button" aria-label="More options">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -608,11 +592,44 @@
                 console.log('fetching project  data: ' + username);
             },
             success: function (response) {
-                console.log('project data is' , response);
+                console.log('project data is', response);
                 if (response.status === true) {
 
                     cards_data(response.projects);
+
                     //function card_data
+                    function cards_data(data) {
+                        console.log('API Response project:', data);
+
+                        const cardsData = [];
+
+                        data.forEach(function (project) {
+                            cardsData.push({
+                                image: project.banner_image ? 'https://wooble.org/dms/' + btoa(project.banner_image) : 'https://st.depositphotos.com/2142621/2870/i/450/depositphotos_28708655-stock-photo-oh-no.jpg',
+                                title: project.project_title,
+                            });
+                        });
+                        console.log('cardsData', cardsData);
+
+                        const cardsContainer = document.getElementById("cardsContainer");
+
+                        cardsData.forEach((project, index) => {
+                            const cardDiv = document.createElement("div");
+                            cardDiv.className = "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center";
+
+                            cardDiv.innerHTML = `
+ <div class="card" style="width: 18rem;">
+        <img src="${project.image}" class="card-img-top" alt="image not found">
+        <div class="card-body">
+          <p class="card-text">${project.title}</p>
+        </div>
+      </div>
+
+        `;
+
+                            cardsContainer.appendChild(cardDiv);
+                        });
+                    }
                 }
             },
             error: function (xhr, status, error) {
@@ -620,36 +637,68 @@
             }
         });
 
+        //imapct Zone
+        $.ajax({
+            url: 'https://wooble.io/api/impact/fetchAllImpacts.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                username: username,
+            },
+            beforeSend: function () {
+                console.log('fetching Imapct Zone data: ' + username);
+            },
+            success: function (response) {
+                console.log('Imapct Zone data is', response);
+                if (response.success === true) {
+
+                    impactzone_data(response.impacts);
+
+                    // function impactzone-data
+
+                    function impactzone_data(data) {
+                        console.log('API Response impactzone_data', data);
+
+                        const impactzoneData = [];
+
+                        data.forEach(function (impacts) {
+                            impactzoneData.push({
+                                imageSrc: impacts.image_url ? 'https://wooble.org/dms/' + btoa(impacts.image_url) : 'https://st.depositphotos.com/2142621/2870/i/450/depositphotos_28708655-stock-photo-oh-no.jpg',
+                                text: impacts.title
+                            });
+                        });
+
+                        console.log('impactzoneData', impactzoneData);
+
+                        const galleryRow = document.getElementById("galleryRow");
+
+
+                        impactzoneData.forEach((impacts, index) => {
+                            const col = document.createElement("div");
+                            col.className = "col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center";
+
+                            col.innerHTML = `
+      <div class="card" style="width: 18rem;">
+        <img src="${impacts.imageSrc}" class="card-img-top" alt="image not found">
+        <div class="card-body">
+          <p class="card-text">${impacts.text}</p>
+        </div>
+      </div>
+    `;
+
+                            galleryRow.appendChild(col);
+                        });
+                    }
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('API Error:', xhr.responseText, status, error);
+            }
+        });
 
     })();
 
-    function cards_data(data) {
-        console.log('API Response project:', data);
 
-        const cardsData = [];
-
-        data.forEach(function (project) {
-            cardsData.push({
-                title: project.project_title,
-                description: project.project_description,
-            });
-        });
-        console.log('cardsData', cardsData);
-
-        const cardsContainer = document.getElementById("cardsContainer");
-
-        cardsData.forEach((project, index) => {
-            const cardDiv = document.createElement("div");
-            cardDiv.className = "cards";
-
-            cardDiv.innerHTML = `
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-        `;
-
-            cardsContainer.appendChild(cardDiv);
-        });
-    }
 </script>
 
 
