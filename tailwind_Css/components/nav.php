@@ -16,7 +16,7 @@ $Profile = "../profile/profile.php";
         <div class="hidden md:flex space-x-5">
             <a href="#home" class="text-gray-300 hover:text-white p-2">Home</a>
             <a href="../tailwind_Css/Service.php" class="text-gray-300 hover:text-white p-2">Services</a>
-            <a href="../tailwnd_Css/feed.html" class="text-gray-300 hover:text-white p-2">Feed</a>
+            <a href="../feed/feed.php" class="text-gray-300 hover:text-white p-2">Feed</a>
             <a href="../tailwind_Css/portfolio.php" class="text-gray-300 hover:text-white p-2">Portfolio</a>
             <a href="../profile/profile.php" class="text-gray-300 hover:text-white p-2">Profile</a>
 
