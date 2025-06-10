@@ -20,7 +20,7 @@ body {
 .top-navbar {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
-    padding: 8px 0;
+    padding: 3px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -67,32 +67,46 @@ body {
     width: 100%;
     padding-left: 8px;
 }
-
 .nav-icon-link {
-    display: flex;
+    position: relative;
+    text-decoration: none;
+    color: #333;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: #666;
+    padding: 6px 12px;
+    transition: color 0.2s;
+}
+.nav-icon-link:hover{
+    color: #000;
+
+}
+.nav-icon-link span {
     font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+}
+.nav-icon-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.nav-icon-link:hover {
-    background-color: #e0e0e0;
+.nav-icon-link.active::after {
+    transform: scaleX(1);
 }
+
 
 .nav-icon-link svg {
     width: 24px;
     height: 24px;
     margin-bottom: 2px;
     color: #666;
-}
-
-.nav-icon-link span {
-    font-weight: 500;
 }
 
 .main-layout {
@@ -183,7 +197,7 @@ body {
     border-radius: 50%;
     border: 2px solid #fff;
     object-fit: cover;
-    display: block;
+    /*display: block;*/
     margin-left: 5px;
 }
 
@@ -311,6 +325,7 @@ body {
     height: 20px;
 }
 
+
 .news-card .card-header, .puzzle-card .card-header {
     font-size: 16px;
     font-weight: 600;
@@ -369,6 +384,97 @@ body {
     background-color: #888;
     font-size: 20px;
 }
+/* Overlay background */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+/* Modal box */
+.modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 12px;
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Profile inside modal */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Textarea */
+.modal-textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 16px;
+    border: none;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+    font-family: monospace;
+}
+
+/* Footer with icons */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.post-btn {
+    background-color: #0A66C2;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    opacity: 0.6;
+}
 
 
 @media (max-width: 1200px) {
@@ -397,9 +503,12 @@ body {
     .navbar-right a {
         font-size: 10px;
     }
+    .nav-icon-link span{
+        font-size: 8px;
+    }
 
     .post-author a {
-        osition: absolute;
+        position: absolute;
         right: 30rem;
     }
 
@@ -407,16 +516,14 @@ body {
 
 @media (max-width: 768px) {
     .top-navbar {
-        padding: 8px 16px;
+        padding: 4px 16px;
     }
 
     .navbar-content {
         padding: 0;
     }
 
-    .navbar-left .search-bar {
-        display: none;
-    }
+
 
     .right-sidebar {
         display: none;
@@ -446,7 +553,7 @@ body {
     }
 
     .post-action-button {
-        font-size: 12px;
+        font-size: 10px;
         padding: 6px 8px;
     }
 
@@ -461,3 +568,4 @@ body {
     }
 
 }
+

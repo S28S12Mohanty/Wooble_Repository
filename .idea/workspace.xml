@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add another commit">
+    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add another one commit">
+      <change afterPath="$PROJECT_DIR$/feed/feed_profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feed/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feed.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/feed.php" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/components/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind_Css/components/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind_Css/components/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +81,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PS-251.25410.148" />
-        <option value="bundled-php-predefined-a98d8de5180a-c5828cf854d9-com.jetbrains.php.sharedIndexes-PS-251.25410.148" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PS-251.26094.133" />
+        <option value="bundled-php-predefined-a98d8de5180a-c5828cf854d9-com.jetbrains.php.sharedIndexes-PS-251.26094.133" />
       </set>
     </attachedChunks>
   </component>
@@ -110,7 +114,12 @@
       <workItem from="1749009482183" duration="26071000" />
       <workItem from="1749096395213" duration="13922000" />
       <workItem from="1749119589557" duration="8159000" />
-      <workItem from="1749182958285" duration="21585000" />
+      <workItem from="1749182958285" duration="21787000" />
+      <workItem from="1749441685527" duration="721000" />
+      <workItem from="1749443200589" duration="15902000" />
+      <workItem from="1749464714371" duration="619000" />
+      <workItem from="1749465943367" duration="8262000" />
+      <workItem from="1749529439879" duration="26798000" />
     </task>
     <task id="LOCAL-00001" summary="Add new commit">
       <option name="closed" value="true" />
@@ -240,7 +249,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749129320171</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add another one commit">
+      <option name="closed" value="true" />
+      <created>1749211644351</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1749211644351</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add another one commit">
+      <option name="closed" value="true" />
+      <created>1749211648638</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1749211648638</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,19 +275,8 @@
     <MESSAGE value="Add commit" />
     <MESSAGE value="Add new commit" />
     <MESSAGE value="Add another commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add another commit" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/feed/html.html</url>
-          <line>31</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Add another one commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add another one commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

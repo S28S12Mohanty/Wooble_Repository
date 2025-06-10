@@ -1,5 +1,3 @@
-<?php session_start(); ?>
-
 
 <footer
         class="bg-black py-10 max-w-full px-4 md:px-12 lg:px-24 xl:px-32 text-white"
@@ -53,7 +51,7 @@
         <ul class="flex flex-col space-y-2 text-center lg:text-left">
             <li><a href="#home" class="hover:underline">Home</a></li>
             <li><a href="../tailwind_Css/Service.php" class="hover:underline">Services</a></li>
-            <li><a href="#resume" class="hover:underline">Resume</a></li>
+            <li><a href="../feed/feed.php" class="hover:underline">feed</a></li>
             <li><a href="../tailwind_Css/portfolio.php" class="hover:underline">Portfolio</a></li>
             <li><a href="../profile/profile.php" class="hover:underline">Profile</a></li>
         </ul>

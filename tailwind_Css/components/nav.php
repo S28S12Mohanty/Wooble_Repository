@@ -49,7 +49,7 @@ $Profile = "../profile/profile.php";
     <div id="menu" class="hidden flex-col md:hidden">
         <a href="#home" class="block text-gray-300 hover:text-white p-2">Home</a>
         <a href="../tailwind_Css/Service.php" class="block text-gray-300 hover:text-white p-2">Services</a>
-        <a href="#resume" class="block text-gray-300 hover:text-white p-2">Resume</a>
+        <a href="../feed/feed.php" class="block text-gray-300 hover:text-white p-2">feed</a>
         <a href="../tailwind_Css/portfolio.php" class="block text-gray-300 hover:text-white p-2">Portfolio</a>
         <a href="../profile/profile.php" class="block text-gray-300 hover:text-white p-2">Profile</a>
 
