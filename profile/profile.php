@@ -6,16 +6,26 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+            crossorigin="anonymous"></script>
+
+<!--    bootstrap-->
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
             crossorigin="anonymous"/>
-    <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
             crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css"/>
+
     <title>profile</title>
 </head>
 
@@ -168,14 +178,37 @@
 
         <div class="image-class">
             <div class="image-create">
+
+
                 <img
                         src="face.jpg"
                         id="profile-image"
                         alt="img not found"
-                        class="position-absolute start-50 translate-middle rounded-circle object-fit-cover border border-5 border-white"
+                        class="img-thumbnail"
+                        style="position: relative; border-radius: 50%; object-fit: cover; border: 5px solid white; cursor: pointer"
+                        data-bs-toggle="modal"
+                        data-bs-target="#imageModal"
                 />
+
+
+
             </div>
         </div>
+
+<!--use modal for profile image -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog " style="background-color: #000; border-radius: 10px">
+                <div class="modal-content bg-transparent border-0" style="margin: auto; padding: 6rem">
+                    <div class="modal-body p-0 " style="left: 50%; transform: translate(-50%,-50%)">
+<!--                        <h3 style="position: relative; top: 50px; left: -9rem;color: #0A66C2}">Profile Photo</h3>-->
+                        <img src="face.jpg" style="border-radius: 50%; position: relative; top: 6rem;" alt="Preview" class="img-fluid" id="modal-image"/>
+
+                    </div>
+<!--                    <h4>Edit</h4>-->
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -447,11 +480,26 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
+
     (function () {
-        const username = sessionStorage.getItem('username');
+        // const username = sessionStorage.getItem('username');
+        // const email = sessionStorage.getItem('email');
+        // console.log(username);
+        // console.log(email);
+
+
+        const Params = new URLSearchParams(window.location.search);
+        let username = Params.get('username');
+
+
+        if (!username) {
+            username = sessionStorage.getItem('username');
+        }
         const email = sessionStorage.getItem('email');
-        console.log(username);
-        console.log(email);
+
+        console.log('search username' + username);
+        // console.log(email);
+
 
         $.ajax({
             url: 'https://wooble.io/api/portfolio/FetchUserData.php',
@@ -459,7 +507,6 @@
             dataType: 'json',
             data: {
                 username: username,
-                email: email,
             },
             beforeSend: function () {
                 console.log('Sending user data' + username);
@@ -495,6 +542,15 @@
                     console.log('https://wooble.org/dms/' + iconimage);
                     document.getElementById('profile-image').src = 'https://wooble.org/dms/' + profileimage;
 
+                    // modal image
+                    let modalimage = response.data.profile_pic;
+                    modalimage = atob(modalimage);
+                    let modifiedName = modalimage.replace('.webp', '_400.png');
+                    console.log('Modified file name:', modifiedName);
+                    const reEncoded = btoa(modifiedName);
+                    console.log('Re-encoded file name:', reEncoded);
+
+                    document.getElementById('modal-image').src = 'https://wooble.org/dms/' + reEncoded;
 
                 }
             },
@@ -530,8 +586,8 @@
                                 date: item.start_date,
                                 title: item.title,
                                 desc: item.subtitle,
-                                img: item.img ? 'https://wooble.org/dms/' + btoa(item.img): 'https://st.depositphotos.com/2142621/2870/i/450/depositphotos_28708655-stock-photo-oh-no.jpg' ,
-                                description : item.description,
+                                img: item.img ? 'https://wooble.org/dms/' + btoa(item.img) : 'https://st.depositphotos.com/2142621/2870/i/450/depositphotos_28708655-stock-photo-oh-no.jpg',
+                                description: item.description,
                             });
                         });
 

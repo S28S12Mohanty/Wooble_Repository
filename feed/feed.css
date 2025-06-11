@@ -120,6 +120,7 @@ body {
     width: 260px;
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 10px;
     padding-bottom: 12px;
 }
 
@@ -135,11 +136,12 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 3px rgba(0, 0, 0, .08);
-    padding: 15px;
+    padding: 20px;
     margin-top: 10px;
 }
 
 .profile-card {
+    cursor: pointer;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 3px rgba(0, 0, 0, .08);
@@ -331,7 +333,10 @@ body {
     font-weight: 600;
     margin-bottom: 12px;
 }
-
+.news-card{
+    height: 20rem;
+    width: 16rem;
+}
 .news-item {
     display: flex;
     align-items: flex-start;
@@ -475,7 +480,11 @@ body {
     font-weight: bold;
     opacity: 0.6;
 }
-
+.comment-input-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
 @media (max-width: 1200px) {
     .page-container {
