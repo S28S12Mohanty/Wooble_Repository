@@ -111,57 +111,67 @@
             </div>
         </div>
 
-
-        <div class="cards">
-            <div class="card-header">
-                <p>Profile viewers</p>
-                <p>218</p>
+        <div class="profile-cards-item">
+            <div class="cards">
+                <div class="card-header">
+                    <p>Profile viewers</p>
+                    <p>218</p>
+                </div>
+                <div class="card-header">
+                    <p>Post impressions</p>
+                    <p>86</p>
+                </div>
             </div>
-            <div class="card-header">
-                <p>Post impressions</p>
-                <p>86</p>
+
+            <div class="cards">
+
+                <p>Achieve your career goals</p>
+                <p>Try Premium for ₹0</p>
+            </div>
+
+            <div class="cards-item">
+                <ul class="cards-list">
+                    <li class="card-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                            <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+                        </svg>
+                        <span>Saved items</span>
+                    </li>
+                    <li class="card-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                        </svg>
+                        <span>Groups</span>
+                    </li>
+                    <li class="card-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-file-text-fill" viewBox="0 0 16 16">
+                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1"/>
+                        </svg>
+                        <span>Newsletters</span>
+                    </li>
+                    <li class="card-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-calendar2-event-fill" viewBox="0 0 16 16">
+                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                        </svg>
+                        <span>Events</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <div class="cards">
-
-            <p>Achieve your career goals</p>
-            <p>Try Premium for ₹0</p>
-        </div>
-
-        <div class="cards-item">
-            <ul class="cards-list">
-                <li class="card-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-bookmark-fill" viewBox="0 0 16 16">
-                        <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
-                    </svg>
-                    <span>Saved items</span>
-                </li>
-                <li class="card-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-people-fill" viewBox="0 0 16 16">
-                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                    </svg>
-                    <span>Groups</span>
-                </li>
-                <li class="card-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-file-text-fill" viewBox="0 0 16 16">
-                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1"/>
-                    </svg>
-                    <span>Newsletters</span>
-                </li>
-                <li class="card-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                         class="bi bi-calendar2-event-fill" viewBox="0 0 16 16">
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M11.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
-                    </svg>
-                    <span>Events</span>
-                </li>
-            </ul>
-        </div>
-
+        <!--toggle button-->
+        <button class="see-more-btn d-md-none">
+            See more
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                 fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+            </svg>
+        </button>
 
     </aside>
 
@@ -171,12 +181,12 @@
         <!-- Create Post Section (Simplified) -->
         <div class="card">
             <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-                <img    src="#"
-                        data-user-id="123"
-                        alt="Your Profile Picture"
-                        id="profile-icon"
-                        class="post-profile-pic  profile-pic"
-                        style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
+                <img src="#"
+                     data-user-id="123"
+                     alt="Your Profile Picture"
+                     id="profile-icon"
+                     class="post-profile-pic  profile-pic"
+                     style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;">
                 <input type="text" placeholder="Start a post" id="openModalBtn"
                        style="flex-grow: 1; padding: 12px; border: 1px solid #e0e0e0; border-radius: 24px; outline: none; font-size: 15px;">
             </div>
@@ -406,6 +416,33 @@
     });
 </script>
 
+<!--seemore seeless toggle button-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const seeMoreBtn = document.querySelector('.see-more-btn');
+        const profilecardsitem = document.querySelector('.profile-cards-item');
+
+        seeMoreBtn.addEventListener('click', function () {
+            profilecardsitem.classList.toggle('show');
+
+            const isShown = profilecardsitem.classList.contains('show');
+            const label = isShown ? 'See less' : 'See more';
+            const icon = isShown
+                ? `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd"
+                             d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+                   </svg>`
+                : `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                       <path fill-rule="evenodd"
+                             d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+                   </svg>`;
+
+            this.innerHTML = `${label} ${icon}`;
+        });
+    });
+</script>
 
 
 <!--jquery-->
@@ -699,12 +736,12 @@
                     commentDiv.className = 'single-comment';
 
                     commentDiv.innerHTML = `
-            <div class="comment-header" data-username="${comment.username}" style="display: flex; align-items: center; margin-bottom: 5px;">
+            <div class="comment-header" data-username="${comment.username}" style="display: flex; align-items: center; margin-bottom: 5px; cursor: pointer">
 
                 <img src="${encodedProfileImage(comment.profile_pic)}" alt="profile not found"
                      style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;">
                 <div>
-                    <div class="comment-author" style="font-weight: bold;">${comment.username }</div>
+                    <div class="comment-author" style="font-weight: bold;">${comment.username}</div>
                     <div class="comment-profession" style="font-size: 12px; color: #666;">${comment.profession}</div>
                 </div>
             </div>
@@ -742,9 +779,6 @@
             window.location.href = '../profile/profile.php?username=' + username;
         }
     });
-
-
-
 
 
 </script>

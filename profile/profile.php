@@ -14,7 +14,7 @@
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
             crossorigin="anonymous"></script>
 
-<!--    bootstrap-->
+    <!--    bootstrap-->
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -24,7 +24,7 @@
             integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
             crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="profile.css"/>
 
     <title>profile</title>
 </head>
@@ -191,20 +191,39 @@
                 />
 
 
-
             </div>
         </div>
 
-<!--use modal for profile image -->
+        <!--use modal for profile image -->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog " style="background-color: #000; border-radius: 10px">
-                <div class="modal-content bg-transparent border-0" style="margin: auto; padding: 6rem">
+            <div class="modal-dialog">
+                <div class="profile-item" id="profile-item">
+                    <h3 style="margin: 10px 20px">Profile Photo</h3>
+                </div>
+                <div class="modal-content bg-transparent border-0">
                     <div class="modal-body p-0 " style="left: 50%; transform: translate(-50%,-50%)">
-<!--                        <h3 style="position: relative; top: 50px; left: -9rem;color: #0A66C2}">Profile Photo</h3>-->
-                        <img src="face.jpg" style="border-radius: 50%; position: relative; top: 6rem;" alt="Preview" class="img-fluid" id="modal-image"/>
+                        <img src="#" style="border-radius: 50%; position: relative; top: 6rem;" alt="Preview"
+                             class="img-fluid" id="modal-image"/>
 
                     </div>
-<!--                    <h4>Edit</h4>-->
+                    <div class="trash-update">
+                        <!--                        <span id="delete-profile-pic">-->
+                        <!--                            <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">-->
+                        <!--                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>-->
+                        <!--                            </svg>-->
+                        <!--                        </span>-->
+
+                        <span id="update-profile-pic">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                 class="bi bi-image" viewBox="0 0 16 16">
+                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
+                             </svg>
+                        </span>
+                        <!--                        file picker input-->
+                        <input type="file" id="profile-pic-input" accept=".jpeg,.png,.jpg" style="display: none;"/>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,6 +329,114 @@
 
 
 <!-- javascript -->
+
+
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded', function () {-->
+<!--        const updateBtn = document.getElementById('update-profile-pic');-->
+<!--        const fileInput = document.getElementById('profile-pic-input');-->
+<!--        const modalImage = document.getElementById('modal-image');-->
+<!---->
+<!--        updateBtn.addEventListener('click', function () {-->
+<!--            fileInput.click();-->
+<!--        });-->
+<!---->
+<!--        fileInput.addEventListener('change', function () {-->
+<!--            const file = this.files[0];-->
+<!--            if (file && file.type.startsWith('image/')) {-->
+<!--                const reader = new FileReader();-->
+<!--                reader.onload = function (e) {-->
+<!--                    modalImage.src = e.target.result;-->
+<!--                };-->
+<!--                reader.readAsDataURL(file);-->
+<!---->
+<!--            }-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+
+<!--<input type="file" id="profile-pic-input" style="display: none;">-->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const updateBtn = document.getElementById('update-profile-pic');
+        const fileInput = document.getElementById('profile-pic-input');
+        const modalImage = document.getElementById('modal-image');
+
+        const userEmail = "subash.mandal@wooble.org";  // Update with dynamic email if needed
+
+        updateBtn.addEventListener('click', function () {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (!file || !file.type.startsWith('image/')) {
+                console.warn("Please select a valid image file.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('type', 'profile-pic');
+            console.log('formdata',formData);
+
+            const corsProxy = 'https://wooble.io';
+            const uploadUrl =  'https://wooble.org/wooble_file_handling/file_upload';
+
+
+            // Upload image file
+            fetch(uploadUrl, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(uploadResponse => {
+                    console.log('Upload Response:', uploadResponse);
+
+                    if (uploadResponse.status === 'success' && uploadResponse.file_name) {
+                        const uploadedFileName = uploadResponse.file_name;
+
+                        // Update image preview
+                        const imageUrl = `https://wooble.org/dms/${uploadedFileName}`;
+                        modalImage.src = imageUrl;
+
+                        console.log('Image URL:', imageUrl);
+
+
+
+                        // Send file name to UpdateProfilePic API
+                        const updateUrl = corsProxy + 'https://wooble.io/api/portfolio/UpdateProfilePic.php';
+                        const updateForm = new FormData();
+                        updateForm.append('email', userEmail);
+                        updateForm.append('files', uploadedFileName);
+
+                        return fetch(updateUrl, {
+                            method: 'POST',
+                            body: updateForm
+                        });
+                    } else {
+                        throw new Error("Image upload failed.");
+                    }
+                })
+                .then(response => response.json())
+                .then(updateResponse => {
+                    console.log('Update Response:', updateResponse);
+                    if (updateResponse.status === 'success') {
+                        alert('Profile picture updated successfully!');
+                    } else {
+                        alert('Failed to update profile picture.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    });
+</script>
+
+
 
 <!--Friend-->
 <script>
