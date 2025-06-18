@@ -69,6 +69,31 @@
                 </svg>
                 <span>Notifications</span>
             </a>
+            <?php if (isset($_SESSION['userId'])) {
+                echo '            <a href="../L_S_Page" class="nav-icon-link" title="LogIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                     class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd"
+                          d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+                <span>LogIn</span>
+            </a>';
+            } else {
+                echo '           <a href="logout.php" class="nav-icon-link" title="Logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                     class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd"
+                          d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+                <span>LogOut</span>
+            </a>';
+            } ?>
+
+
         </nav>
     </div>
 </header>
@@ -101,8 +126,8 @@
             </div>
             <div class="profile-stats">
                 <div>
-                    <a href="#">Connections</a>
-                    <span>500+</span>
+                    <span>followers</span>
+                    <span id="total_followers">500+</span>
                 </div>
                 <div>
                     <a href="#">Views of post</a>
@@ -237,31 +262,27 @@
                         <div class="extra-buttons" style="display: none; margin-left: 10px;">
 
                             <button class="post-action-button" id="toggleExtraBtns">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-calendar-event-fill" viewBox="0 0 16 16">
-                                    <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4-event" viewBox="0 0 16 16">
+                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                                    <path d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
                                 </svg>
 
                             </button>
                             <button class="post-action-button" id="toggleExtraBtns">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-file-earmark-text-fill" viewBox="0 0 16 16">
-                                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"/>
                                 </svg>
 
                             </button>
                             <button class="post-action-button" id="toggleExtraBtns">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                                    <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                                    <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
                                 </svg>
 
                             </button>
                             <button class="post-action-button" id="toggleExtraBtns">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-briefcase-fill" viewBox="0 0 16 16">
-                                    <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
-                                    <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                                    <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
                                 </svg>
 
                             </button>
@@ -272,20 +293,7 @@
                 </div>
             </div>
 
-            <!-- toggle plus button-->
-            <script>
-                const plusBtn = document.getElementById("toggleExtraBtns");
-                const extraBtns = document.querySelector(".extra-buttons");
 
-                plusBtn.addEventListener("click", () => {
-                    if (extraBtns.style.display === "none" || extraBtns.style.display === "") {
-                        extraBtns.style.display = "flex";
-                        plusBtn.style.display = "none";
-                    } else {
-                        extraBtns.style.display = "none";
-                    }
-                });
-            </script>
 
 
             <div style="display: flex; justify-content: space-around;">
@@ -330,6 +338,8 @@
 
     <!-- Right Sidebar -->
     <aside class="right-sidebar">
+
+<!--cards-->
         <div class="card news-card">
             <div class="card-header">LinkedIn News</div>
             <ul>
@@ -371,18 +381,104 @@
             </ul>
         </div>
 
-        <div class="card puzzle-card" style="margin-top: 12px;">
-            <div class="card-header">Today's puzzle</div>
-            <img src="https://placehold.co/260x100/f0f0f0/333333?text=A+quick+brain+teaser" alt="Today's Puzzle">
-            <p style="font-size: 12px; color: #666; margin-top: 8px;">A quick brain teaser for you!</p>
-        </div>
+<!--people sidebar-->
+        <div class="sidebar">
+                <h3>People you may know</h3>
+
+                <div class="person">
+                    <img src="" alt="Image not found">
+                    <div class="person-info">
+                        <p class="person-name">Akash Kumar Nayak</p>
+                        <p class="person-title">Faculty Lecture at LIT | Computer Graphics |</p>
+                        <button class="connect-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="person">
+                    <img src="" alt="Image not found">
+                    <div class="person-info">
+                        <p class="person-name">smruti ranjan pradhan </p>
+                        <p class="person-title">BCA Student | Java Developer | Passionate About Software</p>
+                        <button class="connect-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="person">
+                    <img src="" alt="Image not found">
+                    <div class="person-info">
+                        <p class="person-name">Sarmistha Dalasinghray</p>
+                        <p class="person-title">Student at Lakshya Institute of Technology | B.Sc. in</p>
+                        <button class="connect-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="person">
+                    <img src="" alt="Image not found">
+                    <div class="person-info">
+                        <p class="person-name">Umesh Kumar Pradhan</p>
+                        <p class="person-title">Full-Stack Web Developer | BCA Student at Lakshya</p>
+                        <button class="connect-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="person">
+                    <img src="" alt="Image not fond">
+                    <div class="person-info">
+                        <p class="person-name">Ashutosh Behera </p>
+                        <p class="person-title">C | Python | DSA</p>
+                        <button class="connect-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <div class="show-all">Show all</div>
+            </div>
+
 
         <!-- More sections like ads or follow suggestions can go here -->
     </aside>
 </div>
 
-<!--toggle input button-->
+<!--javascript-->
 <script>
+    <!-- toggle input click button-->
     const openModalBtn = document.getElementById('openModalBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
     const modal = document.getElementById('postModal');
@@ -404,20 +500,44 @@
             overlay.style.display = 'none';
         }
     };
-</script>
 
-<!--nav-icon-link clickable-->
-<script>
+    <!-- toggle plus button-->
+
+    const plusBtn = document.getElementById("toggleExtraBtns");
+    const extraBtns = document.querySelector(".extra-buttons");
+
+    plusBtn.addEventListener("click", () => {
+        if (extraBtns.style.display === "none" || extraBtns.style.display === "") {
+            extraBtns.style.display = "flex";
+            plusBtn.style.display = "none";
+        } else {
+            extraBtns.style.display = "none";
+        }
+    });
+// toggle post button
+    document.addEventListener("DOMContentLoaded", function () {
+        const textarea = document.querySelector(".modal-textarea");
+        const postBtn = document.querySelector(".post-btn");
+
+        // Disable button initially
+        postBtn.disabled = true;
+
+        textarea.addEventListener("input", function () {
+            const text = textarea.value.trim();
+            postBtn.disabled = text.length === 0;
+        });
+    });
+
+
+    <!--nav-icon-link(hr) clickable-->
     document.querySelectorAll('.nav-icon-link').forEach(link => {
         link.addEventListener('click', function () {
             document.querySelectorAll('.nav-icon-link').forEach(el => el.classList.remove('active'));
             this.classList.add('active');
         });
     });
-</script>
 
-<!--seemore seeless toggle button-->
-<script>
+    <!--seemore seeless toggle button-->
     document.addEventListener('DOMContentLoaded', function () {
         const seeMoreBtn = document.querySelector('.see-more-btn');
         const profilecardsitem = document.querySelector('.profile-cards-item');
@@ -482,6 +602,7 @@
                     document.getElementById('profile-name').innerHTML = response.data.name;
                     document.getElementById('bio').innerHTML = response.data.bio;
                     document.getElementById('location').innerHTML = response.data.location;
+                    document.getElementById('total_followers').innerHTML = response.data.total_followers;
 
                     // profile image and icon
                     let icon_image = response.data.profile_pic;
@@ -579,11 +700,12 @@
                 secondaryInfo: data.profession,
                 content: data.question_text,
                 image: encodedPostImage(data.answerer_profile_pic),
-                // likes_count: data.likes_count,
-                // comments_count: data.comments_count,
+                likes_count: data.likes_count,
+                comments_count: data.comments_count,
                 question_text: data.question_text,
                 question_id: data.question_id,
                 username: data.username,
+                user_id: data.user_id,
             });
         });
 
@@ -598,16 +720,24 @@
 
             postCard.innerHTML = `
             <!--header-->
+
+            <div style="display: flex">
             <div class="post-header" data-email="${data.email}" data-username="${data.username}">
                 <img src="${data.profilePic}" alt="${data.author}" class="post-profile-pic" data-username="${data.username}" style="cursor:pointer;">
                 <div class="post-meta">
                     <div class="post-author" data-username="${data.username}" style="cursor:pointer;">${data.author}
-                        <a href="#" style="text-decoration: none;"> <span
-                                style="color: #0a66c2; cursor: pointer; position: relative; font-weight: 700;">+ Follow</span></a>
                     </div>
                     <div class="post-timestamp" data-username="${data.username}" style="cursor:pointer;">${data.timestamp}</div>
                     <div class="post-timestamp" data-username="${data.username}" style="cursor:pointer;">${data.secondaryInfo}</div>
                 </div>
+            </div>
+
+             <!--follow button-->
+             <a href="#" class="follow-btn" data-user-id="1234" style="text-decoration: none;">
+    <span style="color: #0a66c2; cursor: pointer; font-weight: 600; font-size: 15px">+ Follow</span>
+</a>
+
+
             </div>
 
             <!--content-->
@@ -619,13 +749,15 @@
             <!--post-image-->
         ${data.image ? `<img src="${data.image}" alt="${data.content}" class="post-image">` : ''}
 
-              <!--   <p style="font-size: 10px; color: gray;"> ${data.likes_count} Likes . ${data.comments_count} Comment </p> -->
-
+            <div style="font-size: 10px; color: gray; display: flex">
+               <p id="likeCount-${data.question_id}">${data.likes_count} Likes .</p>
+                <p >${data.comments_count} Comment </p>
+            </div>
 
         <!--buttons work for like, comments, repost, send-->
            <div class="post-actions">
 <!--like button-->
-            <button class="post-action-button" id="#">
+            <button class="post-action-button like-button" data-user-id="${data.user_id}" data-question-id="${data.question_id}">
                   Like
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
                     <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
@@ -671,6 +803,115 @@
             postsContainer.appendChild(postCard);
         });
     }
+
+    // follow button
+
+//     $(document).on('click', '.follow-btn', function (e) {
+//
+//         const followBtn = $(this);
+//         const targetUserId = followBtn.data('user-id'); // the user to follow
+//         const loggedInUserId = sessionStorage.getItem('userId'); // your own user ID
+//         console.log('loggedInUserId',loggedInUserId);
+//         console.log('targetUserId',targetUserId);
+//
+//
+//
+//         const isFollowing = followBtn.data('following') === true || followBtn.data('following') === "true";
+//
+//         $.ajax({
+//             url: 'https://wooble.io/api/portfolio/followers.php',
+//             method: 'POST',
+//             dataType: 'json',
+//             data: {
+//                 user_id: loggedInUserId,
+//                 following_user_id: targetUserId,
+//                 action: isFollowing ? 'unfollow' : 'follow'
+//             },
+//             success: function (response) {
+//                 console.log('API response:', response);
+//
+//                 if (response.status === "success") {
+//
+//                     if (isFollowing) {
+//                         followBtn.html(`<span style="color: #0a66c2; cursor: pointer; font-size: 15px; font-weight: 600;">+ Follow</span>
+//                                         `);
+//                         followBtn.data('following', false);
+//                     } else {
+//                         followBtn.html(`<span style="color: #0a66c2; cursor: pointer; font-size: 15px; font-weight: 600;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+//   <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+// </svg>️Following</span>`);
+//                         followBtn.data('following', true);
+//                     }
+//                 } else {
+//                     alert("Something went wrong. Try again.");
+//                 }
+//             },
+//             error: function (xhr, status, error) {
+//                 console.error("Follow failed:", error);
+//                 alert("Something went wrong. Try again.");
+//             }
+//         });
+//     });
+
+
+
+
+
+
+
+
+
+
+
+    // click like_button
+    document.addEventListener("click", function (e) {
+        const likeBtn = e.target.closest(".like-button");
+        if (likeBtn) {
+
+            const questionid = likeBtn.dataset.questionId;
+            const logInuser = sessionStorage.getItem('userId');
+            console.log('logInuser', logInuser);
+            console.log('questionid', logInuser);
+
+            const isLiked = likeBtn.dataset.liked === "true";
+            console.log('isLiked', isLiked);
+            $.ajax({
+                url: 'https://wooble.io/feed/discussion_api/topic_like_dislike.php',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    user_id: logInuser,
+                    question_id: questionid,
+                    action: isLiked ? 'unlike' : 'like',
+                },
+                success: function (response) {
+                    if (response.success) {
+                        const likeCounts = document.getElementById('likeCount-'+questionid);
+
+                        let currentLikes = parseInt(likeCounts.textContent);
+                        if (isLiked) {
+                            currentLikes --;
+                            likeBtn.innerHTML = `Like <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                                <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                                </svg>`;
+                            likeBtn.dataset.liked = "false";
+                        } else {
+                            currentLikes ++;
+                            likeBtn.innerHTML = `Like <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+  <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a10 10 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733q.086.18.138.363c.077.27.113.567.113.856s-.036.586-.113.856c-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.2 3.2 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.8 4.8 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+</svg>`;
+                            likeBtn.dataset.liked = "true";
+                        }
+                        likeCounts.textContent = `${currentLikes} Likes .`;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('API Error:', xhr.responseText, status, error);
+                }
+            });
+        }
+    });
+
 
     // click Comments_button
     document.addEventListener("click", async function (e) {
@@ -748,6 +989,11 @@
             <div class="comment-text" style="margin-left: 40px; font-size: 14px;">
                 ${comment.comment_text}
             </div>
+            <div class="like_reply" >
+                  <div>Like</div>
+                    <div>|</div>
+                    <div>Reply</div>
+            </div>
             <hr style="border: none; border-top: 1px solid #eee; margin: 10px 0;">
         `;
                     targetCommentBox.appendChild(commentDiv);
@@ -779,6 +1025,7 @@
             window.location.href = '../profile/profile.php?username=' + username;
         }
     });
+
 
 
 </script>

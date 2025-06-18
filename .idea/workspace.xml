@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add another one commit" />
+    <list default="true" id="1c5f149d-b335-45a8-8eb1-3aa60fb6daa7" name="Changes" comment="Add another one commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L_S_Page/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/L_S_Page/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/feed.css" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feed.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feed/feed.php" beforeDir="false" afterPath="$PROJECT_DIR$/feed/feed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind_Css/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/feed/logout.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,27 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.feed.html.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sunami/Documents/GitHub/Wooble_Repository/tailwind_Css&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.feed.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sunami/Documents/GitHub/Wooble_Repository/feed",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/feed" />
       <recent name="$PROJECT_DIR$/tailwind_Css" />
       <recent name="$PROJECT_DIR$/profile" />
     </key>
@@ -113,6 +121,9 @@
       <workItem from="1749465943367" duration="8262000" />
       <workItem from="1749529439879" duration="26863000" />
       <workItem from="1749614640354" duration="26668000" />
+      <workItem from="1749701099260" duration="24018000" />
+      <workItem from="1749789544752" duration="19479000" />
+      <workItem from="1750219978050" duration="18231000" />
     </task>
     <task id="LOCAL-00001" summary="Add new commit">
       <option name="closed" value="true" />
@@ -274,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749647503755</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add another one commit">
+      <option name="closed" value="true" />
+      <created>1749730078069</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1749730078069</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

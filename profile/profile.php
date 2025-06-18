@@ -41,6 +41,7 @@
                 <h6 id="icon-name">Gerold lorem</h6>
             </div>
         </div>
+      
 
 
         <div id="profileDialogOverlay" class="profile-dialog-overlay hidden">
@@ -196,32 +197,14 @@
 
         <!--use modal for profile image -->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="height:auto;">
                 <div class="profile-item" id="profile-item">
                     <h3 style="margin: 10px 20px">Profile Photo</h3>
                 </div>
                 <div class="modal-content bg-transparent border-0">
                     <div class="modal-body p-0 " style="left: 50%; transform: translate(-50%,-50%)">
-                        <img src="#" style="border-radius: 50%; position: relative; top: 6rem;" alt="Preview"
+                        <img src="#" style="border-radius: 50%; position: relative; top: 4rem;" alt="Preview"
                              class="img-fluid" id="modal-image"/>
-
-                    </div>
-                    <div class="trash-update">
-                        <!--                        <span id="delete-profile-pic">-->
-                        <!--                            <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">-->
-                        <!--                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>-->
-                        <!--                            </svg>-->
-                        <!--                        </span>-->
-
-                        <span id="update-profile-pic">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                 class="bi bi-image" viewBox="0 0 16 16">
-                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
-                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"/>
-                             </svg>
-                        </span>
-                        <!--                        file picker input-->
-                        <input type="file" id="profile-pic-input" accept=".jpeg,.png,.jpg" style="display: none;"/>
 
                     </div>
                 </div>

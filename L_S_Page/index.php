@@ -8,8 +8,8 @@
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
     />
     <style>
 
@@ -25,35 +25,35 @@
             <div class="card shadow">
                 <div class="card-header">
                     <ul
-                            class="nav nav-tabs card-header-tabs flex-row justify-content-between"
-                            id="myTab"
-                            role="tablist"
+                        class="nav nav-tabs card-header-tabs flex-row justify-content-between"
+                        id="myTab"
+                        role="tablist"
                     >
                         <!-- header Login And SignUp -->
                         <li class="nav-item" role="presentation">
                             <button
-                                    class="nav-link active fw-semibold"
-                                    id="login-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#login"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="login"
-                                    aria-selected="true"
+                                class="nav-link active fw-semibold"
+                                id="login-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#login"
+                                type="button"
+                                role="tab"
+                                aria-controls="login"
+                                aria-selected="true"
                             >
                                 Login
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button
-                                    class="nav-link fw-semibold"
-                                    id="signup-tab"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#signup"
-                                    type="button"
-                                    role="tab"
-                                    aria-controls="signup"
-                                    aria-selected="false"
+                                class="nav-link fw-semibold"
+                                id="signup-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#signup"
+                                type="button"
+                                role="tab"
+                                aria-controls="signup"
+                                aria-selected="false"
                             >
                                 Sign Up
                             </button>
@@ -65,10 +65,10 @@
 
                         <!-- Login Section -->
                         <div
-                                class="tab-pane fade show active"
-                                id="login"
-                                role="tabpanel"
-                                aria-labelledby="login-tab"
+                            class="tab-pane fade show active"
+                            id="login"
+                            role="tabpanel"
+                            aria-labelledby="login-tab"
                         >
                             <h2 class="card-title text-center">
                                 Login to your account
@@ -82,9 +82,9 @@
                                     >Email address</label
                                     >
                                     <input
-                                            type="email"
-                                            class="form-control"
-                                            id="loginEmail"
+                                        type="email"
+                                        class="form-control"
+                                        id="loginEmail"
                                     />
                                 </div>
                                 <div class="mb-3">
@@ -92,16 +92,16 @@
                                     >Password</label
                                     >
                                     <input
-                                            type="password"
-                                            class="form-control"
-                                            id="loginPassword"
+                                        type="password"
+                                        class="form-control"
+                                        id="loginPassword"
                                     />
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input
-                                            type="checkbox"
-                                            class="form-check-input"
-                                            id="rememberMe"
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="rememberMe"
                                     />
                                     <label class="form-check-label" for="rememberMe"
                                     >Remember me</label
@@ -117,10 +117,10 @@
 
                         <!-- Sign Up Section -->
                         <div
-                                class="tab-pane fade"
-                                id="signup"
-                                role="tabpanel"
-                                aria-labelledby="signup-tab"
+                            class="tab-pane fade"
+                            id="signup"
+                            role="tabpanel"
+                            aria-labelledby="signup-tab"
                         >
                             <h2 class="card-title text-center">
                                 Create a new account
@@ -133,10 +133,10 @@
                                     >Full Name</label
                                     >
                                     <input
-                                            type="text"
-                                            class="form-control"
-                                            id="signupName"
-                                            required
+                                        type="text"
+                                        class="form-control"
+                                        id="signupName"
+                                        required
                                     />
                                 </div>
                                 <div class="mb-3">
@@ -144,10 +144,10 @@
                                     >Email address</label
                                     >
                                     <input
-                                            type="email"
-                                            class="form-control"
-                                            id="signupEmail"
-                                            required
+                                        type="email"
+                                        class="form-control"
+                                        id="signupEmail"
+                                        required
                                     />
                                 </div>
                                 <div class="mb-3">
@@ -155,10 +155,10 @@
                                     >Password</label
                                     >
                                     <input
-                                            type="password"
-                                            class="form-control"
-                                            id="signupPassword"
-                                            required
+                                        type="password"
+                                        class="form-control"
+                                        id="signupPassword"
+                                        required
                                     />
                                 </div>
                                 <div class="mb-3">
@@ -166,18 +166,18 @@
                                     >Confirm Password</label
                                     >
                                     <input
-                                            type="password"
-                                            class="form-control"
-                                            id="confirmSignupPassword"
-                                            required
+                                        type="password"
+                                        class="form-control"
+                                        id="confirmSignupPassword"
+                                        required
                                     />
                                 </div>
                                 <div class="mb-3 form-check">
                                     <input
-                                            type="checkbox"
-                                            class="form-check-input"
-                                            id="signupTerms"
-                                            required
+                                        type="checkbox"
+                                        class="form-check-input"
+                                        id="signupTerms"
+                                        required
                                     />
                                     <label class="form-check-label" for="signupTerms"
                                     >I agree to the terms and conditions</label
@@ -238,9 +238,9 @@
                 if (response.status === 'success') {
                     alert('Login successful!');
                     sessionStorage.setItem("email", response.data.email);
-
+                    sessionStorage.setItem("userId", response.data.user_id);
                     sessionStorage.setItem("username", response.data.username);
-                    window.location.href = '../tailwind_Css/index.php?username='+response.data.username;
+                    window.location.href = '../feed/feed.php?username='+response.data.username;
 
                 } else {
                     alert('Login failed: ' + response.message);
@@ -258,4 +258,3 @@
 
 </body>
 </html>
-  
