@@ -55,7 +55,6 @@ body {
 .profile-dialog-header {
     display: flex;
     align-items: center;
-    padding: 15px;
     border-bottom: 1px solid #eee;
     padding-right: 50px;
     gap: 2rem;
@@ -416,6 +415,19 @@ body {
     display: flex;
     margin-top: 2rem;
 }
+.follow-btn{
+    border: none;
+    border-radius: 15px;
+    background-color: #405be5;
+    color: white;
+    padding: 6px;
+    box-sizing: border-box;
+    width: 8rem;
+}
+.follow-btn:hover{
+    background-color: #374dc0;
+}
+
 
 @media (max-width: 767.98px) {
 

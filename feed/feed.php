@@ -105,6 +105,7 @@
     <aside class="left-sidebar">
 
         <div class="profile-card profile-pic">
+            <div class="profilepic" style="cursor: pointer">
             <div class="profile-bg">
                 <!-- Placeholder for background image -->
                 <img src="#"
@@ -124,8 +125,10 @@
             <div class="location" id="location">
                 khordha , Odisha
             </div>
+            </div>
+
             <div class="profile-stats">
-                <div>
+                <div class="followers" style="cursor: pointer">
                     <span>followers</span>
                     <span id="total_followers">500+</span>
                 </div>
@@ -633,7 +636,7 @@
 
         // visit my profile as a user
         document.addEventListener("DOMContentLoaded", function () {
-            const profileCard = document.querySelector('.profile-pic');
+            const profileCard = document.querySelector('.profilepic');
 
             profileCard.addEventListener('click', function () {
                 const userId = this.dataset.userId;
@@ -642,6 +645,20 @@
             });
 
         });
+
+        //visit followers profile
+        document.addEventListener("DOMContentLoaded", function () {
+            const profileCard = document.querySelector('.followers');
+
+            profileCard.addEventListener('click', function () {
+                const userId = this.dataset.userId;
+                console.log(" to profile for:", userId);
+                window.location.href = 'follower.php?username=' + username;
+            });
+
+        });
+
+
 
 
 //for infinity scroll
@@ -732,9 +749,7 @@
                 </div>
             </div>
 
-             <!--follow button-->
-             <a href="#" class="follow-btn" data-user-id="1234" style="text-decoration: none;">
-    <span style="color: #0a66c2; cursor: pointer; font-weight: 600; font-size: 15px">+ Follow</span>
+
 </a>
 
 
@@ -803,61 +818,6 @@
             postsContainer.appendChild(postCard);
         });
     }
-
-    // follow button
-
-//     $(document).on('click', '.follow-btn', function (e) {
-//
-//         const followBtn = $(this);
-//         const targetUserId = followBtn.data('user-id'); // the user to follow
-//         const loggedInUserId = sessionStorage.getItem('userId'); // your own user ID
-//         console.log('loggedInUserId',loggedInUserId);
-//         console.log('targetUserId',targetUserId);
-//
-//
-//
-//         const isFollowing = followBtn.data('following') === true || followBtn.data('following') === "true";
-//
-//         $.ajax({
-//             url: 'https://wooble.io/api/portfolio/followers.php',
-//             method: 'POST',
-//             dataType: 'json',
-//             data: {
-//                 user_id: loggedInUserId,
-//                 following_user_id: targetUserId,
-//                 action: isFollowing ? 'unfollow' : 'follow'
-//             },
-//             success: function (response) {
-//                 console.log('API response:', response);
-//
-//                 if (response.status === "success") {
-//
-//                     if (isFollowing) {
-//                         followBtn.html(`<span style="color: #0a66c2; cursor: pointer; font-size: 15px; font-weight: 600;">+ Follow</span>
-//                                         `);
-//                         followBtn.data('following', false);
-//                     } else {
-//                         followBtn.html(`<span style="color: #0a66c2; cursor: pointer; font-size: 15px; font-weight: 600;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
-//   <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
-// </svg>️Following</span>`);
-//                         followBtn.data('following', true);
-//                     }
-//                 } else {
-//                     alert("Something went wrong. Try again.");
-//                 }
-//             },
-//             error: function (xhr, status, error) {
-//                 console.error("Follow failed:", error);
-//                 alert("Something went wrong. Try again.");
-//             }
-//         });
-//     });
-
-
-
-
-
-
 
 
 

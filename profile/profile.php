@@ -41,7 +41,6 @@
                 <h6 id="icon-name">Gerold lorem</h6>
             </div>
         </div>
-      
 
 
         <div id="profileDialogOverlay" class="profile-dialog-overlay hidden">
@@ -164,6 +163,13 @@
                 </svg>
                 <p id="location">hello</p>
             </div>
+            <button class="follow-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+                Connect
+            </button>
         </div>
 
         <hr>
@@ -313,34 +319,6 @@
 
 <!-- javascript -->
 
-
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', function () {-->
-<!--        const updateBtn = document.getElementById('update-profile-pic');-->
-<!--        const fileInput = document.getElementById('profile-pic-input');-->
-<!--        const modalImage = document.getElementById('modal-image');-->
-<!---->
-<!--        updateBtn.addEventListener('click', function () {-->
-<!--            fileInput.click();-->
-<!--        });-->
-<!---->
-<!--        fileInput.addEventListener('change', function () {-->
-<!--            const file = this.files[0];-->
-<!--            if (file && file.type.startsWith('image/')) {-->
-<!--                const reader = new FileReader();-->
-<!--                reader.onload = function (e) {-->
-<!--                    modalImage.src = e.target.result;-->
-<!--                };-->
-<!--                reader.readAsDataURL(file);-->
-<!---->
-<!--            }-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
-
-
-<!--<input type="file" id="profile-pic-input" style="display: none;">-->
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const updateBtn = document.getElementById('update-profile-pic');
@@ -363,10 +341,10 @@
             const formData = new FormData();
             formData.append('file', file);
             formData.append('type', 'profile-pic');
-            console.log('formdata',formData);
+            console.log('formdata', formData);
 
             const corsProxy = 'https://wooble.io';
-            const uploadUrl =  'https://wooble.org/wooble_file_handling/file_upload';
+            const uploadUrl = 'https://wooble.org/wooble_file_handling/file_upload';
 
 
             // Upload image file
@@ -386,7 +364,6 @@
                         modalImage.src = imageUrl;
 
                         console.log('Image URL:', imageUrl);
-
 
 
                         // Send file name to UpdateProfilePic API
@@ -417,12 +394,11 @@
                 });
         });
     });
-</script>
 
 
 
 <!--Friend-->
-<script>
+
     document.addEventListener("DOMContentLoaded", function () {
         const timeline = document.getElementById("timeline");
         const projects = document.getElementById("projects");
@@ -473,10 +449,9 @@
         });
     });
 
-</script>
 
 <!--clickable close btn-->
-<script>
+
     document.addEventListener('DOMContentLoaded', function () {
         const userProfileIcon = document.getElementById('userProfileIcon');
         const profileDialogOverlay = document.getElementById('profileDialogOverlay');
@@ -496,10 +471,10 @@
             }
         });
     });
-</script>
+
 
 <!--Dropdowm btn with js-->
-<script>
+
     function attachDropdownHandlers() {
         const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
@@ -861,6 +836,14 @@
                 console.error('API Error:', xhr.responseText, status, error);
             }
         });
+
+
+
+
+        // follow button
+
+
+
 
     })();
 
